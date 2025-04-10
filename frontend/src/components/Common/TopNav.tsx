@@ -52,30 +52,30 @@ interface NavItemsProps {
 
 const useProducts = () => useMemo(() => ({
   proxySolutions: [
-    { title: "TheDataProxy.com", path: "https://thedataproxy.com", description: "Global proxy network for seamless data access", icon: FiGlobe },
-    { title: "RoamingProxy.com", path: "https://roamingproxy.com", description: "Rotating proxies for uninterrupted scraping", icon: FiRefreshCw },
+    { title: "thedataproxy.com", path: "https://thedataproxy.com", description: "Global proxy network for seamless data access", icon: FiGlobe },
+    { title: "roamingproxy.com", path: "https://roamingproxy.com", description: "Rotating proxies for uninterrupted scraping", icon: FiRefreshCw },
   ],
   crawlingTools: [
-    { title: "AutomatedCrawler.com", path: "https://automatedcrawler.com", description: "Automated tools for web crawling", icon: FiSearch },
-    { title: "CleanCrawler.com", path: "https://cleancrawler.com", description: "Reliable and clean crawling solutions", icon: FiTool },
-    { title: "IntegrityCrawler.com", path: "https://integritycrawler.com", description: "Crawling with a focus on integrity", icon: FiShield },
-    { title: "TrustCrawler.com", path: "https://trustcrawler.com", description: "Trusted crawling for consistent results", icon: FiCheckCircle },
-    { title: "TrustedCrawler.com", path: "https://trustedcrawler.com", description: "Dependable crawling technology", icon: FiCheckCircle },
+    { title: "automatedcrawler.com", path: "https://automatedcrawler.com", description: "Automated tools for web crawling", icon: FiSearch },
+    { title: "cleancrawler.com", path: "https://cleancrawler.com", description: "Reliable and clean crawling solutions", icon: FiTool },
+    { title: "integritycrawler.com", path: "https://integritycrawler.com", description: "Crawling with a focus on integrity", icon: FiShield },
+    { title: "trustcrawler.com", path: "https://trustcrawler.com", description: "Trusted crawling for consistent results", icon: FiCheckCircle },
+    { title: "trustedcrawler.com", path: "https://trustedcrawler.com", description: "Dependable crawling technology", icon: FiCheckCircle },
   ],
   scrapingSolutions: [
-    { title: "AutomatedScraper.com", path: "https://automatedscraper.com", description: "Efficient automation for web scraping", icon: FiCpu },
-    { title: "CleanScraper.com", path: "https://cleanscraper.com", description: "Precise and clean data extraction", icon: FiTool },
-    { title: "EthicalScraper.com", path: "https://ethicalscraper.com", description: "Compliant scraping practices", icon: FiShield },
-    { title: "LegalScraping.com", path: "https://legalscraping.com", description: "Legally sound scraping solutions", icon: FiLock },
-    { title: "ScrapeCompass.com", path: "https://scrapecompass.com", description: "Navigate scraping with ease", icon: FiCompass },
-    { title: "ScrapingCompass.com", path: "https://scrapingcompass.com", description: "Guided tools for scraping success", icon: FiMap },
-    { title: "ScraperSafe.com", path: "https://scrapersafe.com", description: "Secure scraping with safety in mind", icon: FiLock },
-    { title: "SmartScraping.com", path: "https://smartscraping.com", description: "Intelligent scraping technology", icon: FiCode },
-    { title: "TrustedScraper.com", path: "https://trustedscraper.com", description: "Reliable scraping services", icon: FiCheckCircle },
-    { title: "TrustScraper.com", path: "https://trustscraper.com", description: "Trustworthy scraping tools", icon: FiCheckCircle },
+    { title: "automatedscraper.com", path: "https://automatedscraper.com", description: "Efficient automation for web scraping", icon: FiCpu },
+    { title: "cleanscraper.com", path: "https://cleanscraper.com", description: "Precise and clean data extraction", icon: FiTool },
+    { title: "ethicalscraper.com", path: "https://ethicalscraper.com", description: "Compliant scraping practices", icon: FiShield },
+    { title: "legalscraping.com", path: "https://legalscraping.com", description: "Legally sound scraping solutions", icon: FiLock },
+    { title: "scrapecompass.com", path: "https://scrapecompass.com", description: "Navigate scraping with ease", icon: FiCompass },
+    { title: "scrapingcompass.com", path: "https://scrapingcompass.com", description: "Guided tools for scraping success", icon: FiMap },
+    { title: "scrapersafe.com", path: "https://scrapersafe.com", description: "Secure scraping with safety in mind", icon: FiLock },
+    { title: "smartscraping.com", path: "https://smartscraping.com", description: "Intelligent scraping technology", icon: FiCode },
+    { title: "trustedscraper.com", path: "https://trustedscraper.com", description: "Reliable scraping services", icon: FiCheckCircle },
+    { title: "trustscraper.com", path: "https://trustscraper.com", description: "Trustworthy scraping tools", icon: FiCheckCircle },
   ],
   core: [
-    { title: "CobaltData.net", path: "https://cobaltdata.net", description: "The hub for all Cobalt solutions", icon: FiGlobe },
+    { title: "cobaltdata.net", path: "https://cobaltdata.net", description: "The hub for all Cobalt solutions", icon: FiGlobe },
   ],
 }), []);
 
@@ -121,7 +121,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
 
   const finalNavStructure = useMemo(() => {
     const structure = [...navStructure];
-    structure[0].subItems = [...proxySolutions, ...core]; // Proxy Solutions + CobaltData.net
+    structure[0].subItems = [...proxySolutions, ...core]; // Proxy Solutions + cobaltdata.net
     structure[1].subItems = crawlingTools; // Crawling Tools
     structure[2].subItems = scrapingSolutions; // Scraping Solutions
     return structure;

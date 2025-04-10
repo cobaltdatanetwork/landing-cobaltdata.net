@@ -15,25 +15,25 @@ function LandingPage() {
 
   const allSites = [
     // Proxy Solutions
-    { name: "TheDataProxy.com", description: "Global proxy network with over 10M IPs.", link: "https://thedataproxy.com" },
-    { name: "RoamingProxy.com", description: "Rotating proxies for uninterrupted access.", link: "https://roamingproxy.com" },
+    { name: "thedataproxy.com", description: "Global proxy network with over 10M IPs.", link: "https://thedataproxy.com" },
+    { name: "roamingproxy.com", description: "Rotating proxies for uninterrupted access.", link: "https://roamingproxy.com" },
     // Crawling Tools
-    { name: "AutomatedCrawler.com", description: "Automate complex web crawling tasks.", link: "https://automatedcrawler.com" },
-    { name: "CleanCrawler.com", description: "Reliable and clean crawling tools.", link: "https://cleancrawler.com" },
-    { name: "IntegrityCrawler.com", description: "Crawling with a focus on integrity.", link: "https://integritycrawler.com" },
-    { name: "TrustCrawler.com", description: "Trusted crawling for consistent results.", link: "https://trustcrawler.com" },
-    { name: "TrustedCrawler.com", description: "Dependable crawling technology.", link: "https://trustedcrawler.com" },
+    { name: "automatedcrawler.com", description: "Automate complex web crawling tasks.", link: "https://automatedcrawler.com" },
+    { name: "cleancrawler.com", description: "Reliable and clean crawling tools.", link: "https://cleancrawler.com" },
+    { name: "integritycrawler.com", description: "Crawling with a focus on integrity.", link: "https://integritycrawler.com" },
+    { name: "trustcrawler.com", description: "Trusted crawling for consistent results.", link: "https://trustcrawler.com" },
+    { name: "trustedcrawler.com", description: "Dependable crawling technology.", link: "https://trustedcrawler.com" },
     // Scraping Solutions
-    { name: "AutomatedScraper.com", description: "Efficient automation for web scraping.", link: "https://automatedscraper.com" },
-    { name: "CleanScraper.com", description: "Precise and clean data extraction.", link: "https://cleanscraper.com" },
-    { name: "EthicalScraper.com", description: "Compliant and ethical scraping tools.", link: "https://ethicalscraper.com" },
-    { name: "LegalScraping.com", description: "Legally sound scraping solutions.", link: "https://legalscraping.com" },
-    { name: "ScrapeCompass.com", description: "Navigate scraping challenges easily.", link: "https://scrapecompass.com" },
-    { name: "ScrapingCompass.com", description: "Guided tools for scraping success.", link: "https://scrapingcompass.com" },
-    { name: "ScraperSafe.com", description: "Secure scraping with safety in mind.", link: "https://scrapersafe.com" },
-    { name: "SmartScraping.com", description: "Intelligent scraping technology.", link: "https://smartscraping.com" },
-    { name: "TrustedScraper.com", description: "Reliable scraping services.", link: "https://trustedscraper.com" },
-    { name: "TrustScraper.com", description: "Trustworthy scraping tools.", link: "https://trustscraper.com" },
+    { name: "automatedscraper.com", description: "Efficient automation for web scraping.", link: "https://automatedscraper.com" },
+    { name: "cleanscraper.com", description: "Precise and clean data extraction.", link: "https://cleanscraper.com" },
+    { name: "ethicalscraper.com", description: "Compliant and ethical scraping tools.", link: "https://ethicalscraper.com" },
+    { name: "legalscraping.com", description: "Legally sound scraping solutions.", link: "https://legalscraping.com" },
+    { name: "scrapecompass.com", description: "Navigate scraping challenges easily.", link: "https://scrapecompass.com" },
+    { name: "scrapingcompass.com", description: "Guided tools for scraping success.", link: "https://scrapingcompass.com" },
+    { name: "scrapersafe.com", description: "Secure scraping with safety in mind.", link: "https://scrapersafe.com" },
+    { name: "smartscraping.com", description: "Intelligent scraping technology.", link: "https://smartscraping.com" },
+    { name: "trustedscraper.com", description: "Reliable scraping services.", link: "https://trustedscraper.com" },
+    { name: "trustscraper.com", description: "Trustworthy scraping tools.", link: "https://trustscraper.com" },
   ];
 
   return (
@@ -43,7 +43,7 @@ function LandingPage() {
         title="Cobalt Data Network: Web Data Solutions"
         subtitle="Explore our advanced suite of proxy and scraping tools designed for scalable, compliant data extraction."
         ctaText="Discover Our Network"
-        ctaLink="/products"
+        ctaLink="/demo-request"
         bgImage="https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
 

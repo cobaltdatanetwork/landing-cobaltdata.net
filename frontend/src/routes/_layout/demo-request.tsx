@@ -127,7 +127,7 @@ function RequestDemoPage() {
       <Container maxW="800px" mx="auto" px={4} py={16} color="gray.800">
         <VStack spacing={8} align="start" w="full">
           <Heading as="h1" size="xl" fontWeight="medium">
-            Request a Market Research Solution Demo
+            Request a Product Demo
           </Heading>
           
        
