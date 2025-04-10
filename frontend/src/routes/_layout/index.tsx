@@ -65,11 +65,13 @@ function LandingPage() {
               Proxy Solutions
             </Heading>
             <Grid
-              templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+              templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} // 2 columns for 2 items
               gap={{ base: 4, md: 6 }}
-              justifyItems="center"
+              justifyContent="center" // Centers the grid content
+              maxW={{ base: "100%", md: "720px" }} // Adjusted to fit 2 cards snugly
+              mx="auto" // Centers the grid horizontally
             >
-              {allSites.slice(0, 2).map((site, index) => ( // Adjusted slice to match your data
+              {allSites.slice(0, 2).map((site, index) => (
                 <VStack
                   key={index}
                   p={6}
@@ -78,7 +80,7 @@ function LandingPage() {
                   spacing={4}
                   align="stretch"
                   color="gray.800"
-                  maxW="360px"
+                  maxW="360px" // Consistent card width
                   w="100%"
                   boxShadow="sm"
                   _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
