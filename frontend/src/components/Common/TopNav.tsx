@@ -174,7 +174,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                 <Flex
                   direction={isMobile ? "column" : "row"}
                   wrap={isMobile ? "nowrap" : "wrap"}
-                  justify={isMobile ? "flex-start" : "flex-start"}
+                  justify={isMobile ? "flex-start" : "flex-start"} // Align left
                   align="flex-start"
                   p={4}
                   gap={4}
@@ -192,9 +192,9 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                         setActiveMenuIndex(null);
                       }}
                       p={2}
-                      flex={isMobile ? "none" : "0 0 33.33%"} // 3 columns per row
-                      maxW={isMobile ? "100%" : "33.33%"} // Ensure max width for 3 columns
-                      minW={0} // Allow shrinking if needed
+                      flex={isMobile ? "none" : "0 0 33.33%"} // 3 columns
+                      minW={isMobile ? "auto" : "200px"} // Ensure enough width for content
+                      maxW={isMobile ? "auto" : "33.33%"} // Cap at 1/3 width
                     >
                       <Flex align="flex-start">
                         {subItem.icon && <Icon as={subItem.icon} mr={2} mt={1} boxSize={5} color="white" />}
