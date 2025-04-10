@@ -8,7 +8,7 @@ import {
   Image,
   Link,
   Container,
-  useDisclosure
+  useDisclosure,
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "@tanstack/react-router";
 import { 
@@ -16,6 +16,16 @@ import {
   FiChevronDown, 
   FiGlobe,
   FiBook,
+  FiShield,
+  FiRefreshCw,
+  FiSearch,
+  FiTool,
+  FiLock,
+  FiMap,
+  FiCompass,
+  FiCode,
+  FiCpu,
+  FiCheckCircle,
 } from "react-icons/fi";
 
 import Logo from "/assets/images/cobalt-data-network-logo.png"; // Adjust path as needed
@@ -32,6 +42,7 @@ interface SubItem {
   title: string;
   path: string;
   description?: string;
+  icon?: any;
 }
 
 interface NavItemsProps {
@@ -39,49 +50,69 @@ interface NavItemsProps {
   isMobile?: boolean;
 }
 
-const useProducts = () => useMemo(() => [
-  { title: "TheDataProxy.com", path: "https://thedataproxy.com", description: "Global proxy network for web scraping" },
-  { title: "AutomatedCrawler.com", path: "https://automatedcrawler.com", description: "Automated web crawling solutions" },
-  { title: "AutomatedScraper.com", path: "https://automatedscraper.com", description: "Efficient web scraping automation" },
-  { title: "CleanCrawler.com", path: "https://cleancrawler.com", description: "Clean and reliable crawling tools" },
-  { title: "CleanScraper.com", path: "https://cleanscraper.com", description: "Precise and clean scraping solutions" },
-  { title: "CobaltData.net", path: "https://cobaltdata.net", description: "Umbrella for all Cobalt solutions" },
-  { title: "EthicalScraper.com", path: "https://ethicalscraper.com", description: "Compliant web scraping tools" },
-  { title: "IntegrityCrawler.com", path: "https://integritycrawler.com", description: "Crawling with integrity" },
-  { title: "LegalScraping.com", path: "https://legalscraping.com", description: "Legally compliant scraping solutions" },
-  { title: "RoamingProxy.com", path: "https://roamingproxy.com", description: "Rotating proxy services" },
-  { title: "ScrapeCompass.com", path: "https://scrapecompass.com", description: "Navigate web scraping easily" },
-  { title: "ScrapingCompass.com", path: "https://scrapingcompass.com", description: "Guided scraping solutions" },
-  { title: "ScraperSafe.com", path: "https://scrapersafe.com", description: "Safe and secure scraping tools" },
-  { title: "SmartScraping.com", path: "https://smartscraping.com", description: "Intelligent scraping technology" },
-  { title: "TrustCrawler.com", path: "https://trustcrawler.com", description: "Trusted crawling solutions" },
-  { title: "TrustedCrawler.com", path: "https://trustedcrawler.com", description: "Reliable crawling tools" },
-  { title: "TrustedScraper.com", path: "https://trustedscraper.com", description: "Trusted scraping services" },
-  { title: "TrustScraper.com", path: "https://trustscraper.com", description: "Secure and trustworthy scraping" },
-], []);
+const useProducts = () => useMemo(() => ({
+  proxySolutions: [
+    { title: "TheDataProxy.com", path: "https://thedataproxy.com", description: "Global proxy network for seamless data access", icon: FiGlobe },
+    { title: "RoamingProxy.com", path: "https://roamingproxy.com", description: "Rotating proxies for uninterrupted scraping", icon: FiRefreshCw },
+  ],
+  crawlingTools: [
+    { title: "AutomatedCrawler.com", path: "https://automatedcrawler.com", description: "Automated tools for web crawling", icon: FiSearch },
+    { title: "CleanCrawler.com", path: "https://cleancrawler.com", description: "Reliable and clean crawling solutions", icon: FiTool },
+    { title: "IntegrityCrawler.com", path: "https://integritycrawler.com", description: "Crawling with a focus on integrity", icon: FiShield },
+    { title: "TrustCrawler.com", path: "https://trustcrawler.com", description: "Trusted crawling for consistent results", icon: FiCheckCircle },
+    { title: "TrustedCrawler.com", path: "https://trustedcrawler.com", description: "Dependable crawling technology", icon: FiCheckCircle },
+  ],
+  scrapingSolutions: [
+    { title: "AutomatedScraper.com", path: "https://automatedscraper.com", description: "Efficient automation for web scraping", icon: FiCpu },
+    { title: "CleanScraper.com", path: "https://cleanscraper.com", description: "Precise and clean data extraction", icon: FiTool },
+    { title: "EthicalScraper.com", path: "https://ethicalscraper.com", description: "Compliant scraping practices", icon: FiShield },
+    { title: "LegalScraping.com", path: "https://legalscraping.com", description: "Legally sound scraping solutions", icon: FiLock },
+    { title: "ScrapeCompass.com", path: "https://scrapecompass.com", description: "Navigate scraping with ease", icon: FiCompass },
+    { title: "ScrapingCompass.com", path: "https://scrapingcompass.com", description: "Guided tools for scraping success", icon: FiMap },
+    { title: "ScraperSafe.com", path: "https://scrapersafe.com", description: "Secure scraping with safety in mind", icon: FiLock },
+    { title: "SmartScraping.com", path: "https://smartscraping.com", description: "Intelligent scraping technology", icon: FiCode },
+    { title: "TrustedScraper.com", path: "https://trustedscraper.com", description: "Reliable scraping services", icon: FiCheckCircle },
+    { title: "TrustScraper.com", path: "https://trustscraper.com", description: "Trustworthy scraping tools", icon: FiCheckCircle },
+  ],
+  core: [
+    { title: "CobaltData.net", path: "https://cobaltdata.net", description: "The hub for all Cobalt solutions", icon: FiGlobe },
+  ],
+}), []);
 
 const navStructure: NavItem[] = [
   {
-    title: "Products",
+    title: "Proxy Solutions",
     icon: FiGlobe,
-    description: "Explore our suite of web scraping and proxy solutions",
-    subItems: [], // Populated dynamically in NavItems
+    description: "Powerful proxy networks for web data collection",
+    subItems: [], // Populated dynamically
+  },
+  {
+    title: "Crawling Tools",
+    icon: FiSearch,
+    description: "Advanced tools for exploring the web",
+    subItems: [], // Populated dynamically
+  },
+  {
+    title: "Scraping Solutions",
+    icon: FiCode,
+    description: "Precision tools for extracting web data",
+    subItems: [], // Populated dynamically
   },
   {
     title: "Resources",
     icon: FiBook,
-    description: "Documentation and learning resources",
+    description: "Guides and support for your projects",
     subItems: [
-      { title: "Articles", path: "/resources/blog", description: "Learn how to use our APIs" },
-      { title: "FAQ", path: "/resources/faq", description: "Answers to common questions" },
-      { title: "Support", path: "/resources/support-center", description: "Get help with your projects" },
+      { title: "Articles", path: "/resources/blog", description: "Learn how to use our APIs", icon: FiBook },
+      { title: "FAQ", path: "/resources/faq", description: "Answers to common questions", icon: FiBook },
+      { title: "Support", path: "/resources/support-center", description: "Get help with your projects", icon: FiBook },
     ],
   },
-  { title: "Contact", path: "/contact", description: "Get in touch with us" },
+  { title: "Contact", path: "/contact", description: "Reach out to us" },
 ];
 
 const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
-  const products = useProducts();
+  const { proxySolutions, crawlingTools, scrapingSolutions, core } = useProducts();
   const textColor = "gray.800";
   const hoverColor = "blue.600";
   const bgActive = "blue.100";
@@ -90,9 +121,11 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
 
   const finalNavStructure = useMemo(() => {
     const structure = [...navStructure];
-    structure[0].subItems = products; // Assign products to "Products" menu
+    structure[0].subItems = [...proxySolutions, ...core]; // Proxy Solutions + CobaltData.net
+    structure[1].subItems = crawlingTools; // Crawling Tools
+    structure[2].subItems = scrapingSolutions; // Scraping Solutions
     return structure;
-  }, [products]);
+  }, [proxySolutions, crawlingTools, scrapingSolutions, core]);
 
   const handleMenuToggle = (index: number) => {
     setActiveMenuIndex(activeMenuIndex === index ? null : index);
@@ -163,10 +196,15 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                       flex={isMobile ? "none" : "0 0 25%"}
                       minW={isMobile ? "auto" : 0}
                     >
-                      <Text fontWeight="medium">{subItem.title}</Text>
-                      {subItem.description && (
-                        <Text fontSize="xs" color="gray.500">{subItem.description}</Text>
-                      )}
+                      <Flex align="center">
+                        {subItem.icon && <Icon as={subItem.icon} mr={2} />}
+                        <Box>
+                          <Text fontWeight="medium">{subItem.title}</Text>
+                          {subItem.description && (
+                            <Text fontSize="xs" color="gray.500">{subItem.description}</Text>
+                          )}
+                        </Box>
+                      </Flex>
                     </Box>
                   ))}
                 </Flex>
