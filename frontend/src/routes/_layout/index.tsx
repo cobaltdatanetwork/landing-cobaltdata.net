@@ -105,8 +105,8 @@ function LandingPage() {
             </Grid>
           </Box>
 
-          {/* Crawling Tools */}
-          <Box mb={12}>
+         {/* Crawling Tools */}
+         <Box mb={12}>
             <Heading
               as="h3"
               size="lg"
@@ -117,43 +117,26 @@ function LandingPage() {
             >
               Crawling Tools
             </Heading>
-            <Grid
-              templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-              gap={{ base: 4, md: 6 }}
-              justifyItems="center"
-            >
-              {allSites.slice(2, 7).map((site, index) => ( // Adjusted slice
-                <VStack
-                  key={index}
-                  p={6}
-                  bg="white"
-                  borderRadius="md"
-                  spacing={4}
-                  align="stretch"
-                  color="gray.800"
-                  maxW="360px"
-                  w="100%"
-                  boxShadow="sm"
-                  _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
+            <Box>
+              <Grid
+                templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+                gap={{ base: 4, md: 6 }}
+                justifyItems="center"
+                mb={allSites.slice(2, 7).length % 3 !== 0 ? 0 : 6} // No margin if Flex follows
+              >
+                {allSites.slice(2, 5).map(renderCard)} {/* First full row (3 items) */}
+              </Grid>
+              {allSites.slice(2, 7).length % 3 !== 0 && (
+                <Flex
+                  justify="center"
+                  gap={{ base: 4, md: 6 }}
+                  flexWrap="wrap"
+                  mt={allSites.slice(2, 7).length > 3 ? 6 : 0} // Margin only if preceded by Grid
                 >
-                  <Heading as="h4" size="md" fontWeight="medium">
-                    {site.name}
-                  </Heading>
-                  <Text fontSize="sm" color="gray.600">
-                    {site.description}
-                  </Text>
-                  <Link
-                    href={site.link}
-                    isExternal
-                    color="blue.600"
-                    fontWeight="medium"
-                    alignSelf="flex-start"
-                  >
-                    Visit {site.name} →
-                  </Link>
-                </VStack>
-              ))}
-            </Grid>
+                  {allSites.slice(5, 7).map(renderCard)} {/* Remaining 2 items */}
+                </Flex>
+              )}
+            </Box>
           </Box>
 
           {/* Scraping Solutions */}
@@ -168,43 +151,26 @@ function LandingPage() {
             >
               Scraping Solutions
             </Heading>
-            <Grid
-              templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-              gap={{ base: 4, md: 6 }}
-              justifyItems="center"
-            >
-              {allSites.slice(7).map((site, index) => ( // Adjusted slice
-                <VStack
-                  key={index}
-                  p={6}
-                  bg="white"
-                  borderRadius="md"
-                  spacing={4}
-                  align="stretch"
-                  color="gray.800"
-                  maxW="360px"
-                  w="100%"
-                  boxShadow="sm"
-                  _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
+            <Box>
+              <Grid
+                templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+                gap={{ base: 4, md: 6 }}
+                justifyItems="center"
+                mb={allSites.slice(7).length % 3 !== 0 ? 0 : 6} // No margin if Flex follows
+              >
+                {allSites.slice(7, 16).map(renderCard)} {/* First 3 full rows (9 items) */}
+              </Grid>
+              {allSites.slice(7).length % 3 !== 0 && (
+                <Flex
+                  justify="center"
+                  gap={{ base: 4, md: 6 }}
+                  flexWrap="wrap"
+                  mt={allSites.slice(7).length > 3 ? 6 : 0} // Margin only if preceded by Grid
                 >
-                  <Heading as="h4" size="md" fontWeight="medium">
-                    {site.name}
-                  </Heading>
-                  <Text fontSize="sm" color="gray.600">
-                    {site.description}
-                  </Text>
-                  <Link
-                    href={site.link}
-                    isExternal
-                    color="blue.600"
-                    fontWeight="medium"
-                    alignSelf="flex-start"
-                  >
-                    Visit {site.name} →
-                  </Link>
-                </VStack>
-              ))}
-            </Grid>
+                  {allSites.slice(16).map(renderCard)} {/* Remaining 1 item */}
+                </Flex>
+              )}
+            </Box>
           </Box>
         </Box>
       </Box>
