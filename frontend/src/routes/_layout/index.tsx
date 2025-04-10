@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Flex, Grid, Heading, Image, Text, VStack, Button, Link } from "@chakra-ui/react";
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import HeroSection from '../../components/HeroSection';
 import Footer from '../../components/Common/Footer';
 
@@ -9,8 +9,6 @@ export const Route = createFileRoute("/_layout/")({
 });
 
 function LandingPage() {
-  const navigate = useNavigate();
-
   const allSites = [
     // Proxy Solutions
     { name: "thedataproxy.com", description: "Global proxy network with over 10M IPs.", link: "https://thedataproxy.com" },
@@ -104,88 +102,60 @@ function LandingPage() {
             </Heading>
             <Grid
               templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
-              gap={{ base: 4, md: 6 }}
+              gap={6}
               justifyContent="center"
-              maxW={{ base: "100%", md: "840px" }}
+              maxW="840px"
               mx="auto"
             >
               {allSites.slice(0, 2).map(renderCard)}
             </Grid>
           </Box>
 
+          {/* Crawling Tools */}
+          <Box mb={12}>
+            <Heading
+              as="h3"
+              size="lg"
+              mb={8}
+              fontWeight="medium"
+              textAlign="center"
+              color="gray.800"
+            >
+              Crawling Tools
+            </Heading>
+            <Grid
+              templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+              gap={6}
+              justifyContent="center"
+              maxW="1200px"
+              mx="auto"
+            >
+              {allSites.slice(2, 7).map(renderCard)}
+            </Grid>
+          </Box>
 
-
-
-      {/* Crawling Tools */}
-<Box mb={8}> 
-  <Heading
-    as="h3"
-    size="lg"
-    mb={6}
-    fontWeight="medium"
-    textAlign="center"
-    color="gray.800"
-  >
-    Crawling Tools
-  </Heading>
-  <Box>
-    <Grid
-      templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-      gap={{ base: 2, md: 4 }} 
-      justifyItems="center"
-      mb={allSites.slice(2, 7).length % 3 !== 0 ? 0 : 4} 
-    >
-      {allSites.slice(2, 5).map(renderCard)}
-    </Grid>
-    {allSites.slice(2, 7).length % 3 !== 0 && (
-      <Flex
-        justify="center"
-        gap={{ base: 2, md: 4 }} 
-        flexWrap="wrap"
-        mt={allSites.slice(2, 7).length > 3 ? 4 : 0} 
-      >
-        {allSites.slice(5, 7).map(renderCard)}
-      </Flex>
-    )}
-  </Box>
-</Box>
-
-{/* Scraping Solutions */}
-<Box>
-  <Heading
-    as="h3"
-    size="lg"
-    mb={6} 
-    fontWeight="medium"
-    textAlign="center"
-    color="gray.800"
-  >
-    Scraping Solutions
-  </Heading>
-  <Box>
-    <Grid
-      templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-      gap={{ base: 2, md: 4 }} 
-      justifyItems="center"
-      mb={allSites.slice(7).length % 3 !== 0 ? 0 : 4} 
-    >
-      {allSites.slice(7, 16).map(renderCard)}
-    </Grid>
-    {allSites.slice(7).length % 3 !== 0 && (
-      <Flex
-        justify="center"
-        gap={{ base: 2, md: 4 }} 
-        flexWrap="wrap"
-        mt={allSites.slice(7).length > 3 ? 4 : 0}
-      >
-        {allSites.slice(16).map(renderCard)}
-      </Flex>
-    )}
-  </Box>
-</Box>
-
-
-
+          {/* Scraping Solutions */}
+          <Box>
+            <Heading
+              as="h3"
+              size="lg"
+              mb={8}
+              fontWeight="medium"
+              textAlign="center"
+              color="gray.800"
+            >
+              Scraping Solutions
+            </Heading>
+            <Grid
+              templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+              gap={6}
+              justifyContent="center"
+              maxW="1200px"
+              mx="auto"
+            >
+              {allSites.slice(7).map(renderCard)}
+            </Grid>
+          </Box>
         </Box>
       </Box>
 
