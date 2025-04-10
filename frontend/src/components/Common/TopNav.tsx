@@ -192,8 +192,9 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                         setActiveMenuIndex(null);
                       }}
                       p={2}
-                      flex={isMobile ? "none" : "0 0 33.33%"}
-                      minW={isMobile ? "auto" : 0}
+                      flex={isMobile ? "none" : "0 0 33.33%"} // 3 columns per row
+                      maxW={isMobile ? "100%" : "33.33%"} // Ensure max width for 3 columns
+                      minW={0} // Allow shrinking if needed
                     >
                       <Flex align="flex-start">
                         {subItem.icon && <Icon as={subItem.icon} mr={2} mt={1} boxSize={5} color="white" />}
