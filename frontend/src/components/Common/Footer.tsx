@@ -51,7 +51,7 @@ const Footer = () => {
           <Box>
             <Heading as="h4" size="md" mb={2} color="white">Scraping Solutions</Heading>
             <Text color="gray.400" fontSize="sm" mb={4} minH="40px"> {/* Fixed height */}
-              Precision scraping tools for extracting valuable web data.
+              Precision scalable web scraping tools for extracting valuable web data.
             </Text>
             <VStack align="flex-start" spacing={2}>
               <Link href="https://automatedscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
