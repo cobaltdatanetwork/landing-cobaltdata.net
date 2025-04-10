@@ -17,7 +17,7 @@ import {
   FiBook,
 } from "react-icons/fi";
 
-import Logo from "/assets/images/data-proxy-logo.png"; // Adjust path as needed
+import Logo from "/assets/images/cobalt-data-network-logo.png"; // Adjust path as needed
 
 interface NavItem {
   title: string;
