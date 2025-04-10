@@ -48,49 +48,6 @@ const Footer = () => {
               <strong>Address:</strong> 99 Wall St Suite 5660, New York, NY 10005, USA
             </Text>
           </Box>
-
-          {/* Proxy Solutions */}
-          <Box>
-            <Heading as="h4" size="md" mb={2} color="white">Proxy Solutions</Heading>
-            <Text color="gray.400" fontSize="sm" mb={3}>
-              Robust proxy networks for seamless web data access and anonymity.
-            </Text>
-            <VStack align="flex-start" spacing={2}>
-              <Link href="https://thedataproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                TheDataProxy.com
-              </Link>
-              <Link href="https://roamingproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                RoamingProxy.com
-              </Link>
-            </VStack>
-          </Box>
-
-          {/* Crawling Tools */}
-          <Box>
-            <Heading as="h4" size="md" mb={2} color="white">Crawling Tools</Heading>
-            <Text color="gray.400" fontSize="sm" mb={3}>
-              Advanced crawling tools for efficient and reliable web exploration.
-            </Text>
-            <VStack align="flex-start" spacing={2}>
-              <Link href="https://automatedcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                AutomatedCrawler.com
-              </Link>
-              <Link href="https://cleancrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                CleanCrawler.com
-              </Link>
-              <Link href="https://integritycrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                IntegrityCrawler.com
-              </Link>
-              <Link href="https://trustcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                TrustCrawler.com
-              </Link>
-              <Link href="https://trustedcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                TrustedCrawler.com
-              </Link>
-            </VStack>
-          </Box>
-
-          {/* Scraping Solutions */}
           <Box>
             <Heading as="h4" size="md" mb={2} color="white">Scraping Solutions</Heading>
             <Text color="gray.400" fontSize="sm" mb={3}>
@@ -129,6 +86,48 @@ const Footer = () => {
               </Link>
             </VStack>
           </Box>
+      
+          {/* Crawling Tools */}
+          <Box>
+            <Heading as="h4" size="md" mb={2} color="white">Crawling Tools</Heading>
+            <Text color="gray.400" fontSize="sm" mb={3}>
+              Advanced crawling tools for efficient and reliable web exploration.
+            </Text>
+            <VStack align="flex-start" spacing={2}>
+              <Link href="https://automatedcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                AutomatedCrawler.com
+              </Link>
+              <Link href="https://cleancrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                CleanCrawler.com
+              </Link>
+              <Link href="https://integritycrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                IntegrityCrawler.com
+              </Link>
+              <Link href="https://trustcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                TrustCrawler.com
+              </Link>
+              <Link href="https://trustedcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                TrustedCrawler.com
+              </Link>
+            </VStack>
+          </Box>
+    {/* Proxy Solutions */}
+    <Box>
+            <Heading as="h4" size="md" mb={2} color="white">Proxy Solutions</Heading>
+            <Text color="gray.400" fontSize="sm" mb={3}>
+              Robust proxy networks for seamless web data access and anonymity.
+            </Text>
+            <VStack align="flex-start" spacing={2}>
+              <Link href="https://thedataproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                TheDataProxy.com
+              </Link>
+              <Link href="https://roamingproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                RoamingProxy.com
+              </Link>
+            </VStack>
+          </Box>
+
+        
         </Grid>
 
         {/* Bottom Footer - Copyright and Legal */}
