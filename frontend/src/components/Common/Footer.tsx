@@ -57,11 +57,17 @@ const Footer = () => {
             </Text>
             <VStack align="flex-start" spacing={2}>
               <Link href="https://thedataproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                thedataproxy.com
+                thedatproxy.com
               </Link>
               <Link href="https://roamingproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
                 roamingproxy.com
               </Link>
+            </VStack>
+            <Heading as="h4" size="md" mb={2} color="white">Proxy Solutions</Heading>
+            <VStack align="flex-start" spacing={2}>
+              <Link href="/resources/blog" color="gray.300" _hover={{ color: "orange.400" }}>Articles & Guides</Link>
+              <Link href="/resources/faq" color="gray.300" _hover={{ color: "orange.400" }}>FAQ</Link>
+              <Link href="/resources/support-center" color="gray.300" _hover={{ color: "orange.400" }}>Help & Support</Link>
             </VStack>
           </Box>
 
@@ -87,6 +93,9 @@ const Footer = () => {
               <Link href="https://trustedcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
                 trustedcrawler.com
               </Link>
+              <Link href="/resources/blog" color="gray.300" _hover={{ color: "orange.400" }}>Articles</Link>
+              <Link href="/resources/faq" color="gray.300" _hover={{ color: "orange.400" }}>FAQ</Link>
+              <Link href="/resources/support-center" color="gray.300" _hover={{ color: "orange.400" }}>Help & Support</Link>
             </VStack>
           </Box>
 
@@ -127,6 +136,9 @@ const Footer = () => {
               <Link href="https://trustscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
                 trustscraper.com
               </Link>
+              <Link href="/resources/blog" color="gray.300" _hover={{ color: "orange.400" }}>Articles</Link>
+              <Link href="/resources/faq" color="gray.300" _hover={{ color: "orange.400" }}>FAQ</Link>
+              <Link href="/resources/support-center" color="gray.300" _hover={{ color: "orange.400" }}>Help & Support</Link>
             </VStack>
           </Box>
         </Grid>
@@ -143,7 +155,7 @@ const Footer = () => {
             <Link href="/cookie" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Cookie Policy</Link>
             <Link href="/resources/blog" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Articles</Link>
             <Link href="/resources/faq" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>FAQ</Link>
-            <Link href="/resources/support-center" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Support</Link>
+            <Link href="/resources/support-center" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Help & Support</Link>
           </Flex>
         </Flex>
       </Box>
