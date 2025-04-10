@@ -112,7 +112,7 @@ const navStructure: NavItem[] = [
 ];
 
 const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
-  const { proxySolutions, crawlingTools, scrapingSolutions, core } = useProducts();
+  const { proxySolutions, crawlingTools, scrapingSolutions } = useProducts();
   const textColor = "white"; // Changed to white
   const hoverColor = "blue.200"; // Lighter blue for hover
   const bgActive = "blue.700"; // Slightly darker blue for active state
@@ -121,11 +121,11 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
 
   const finalNavStructure = useMemo(() => {
     const structure = [...navStructure];
-    structure[0].subItems = [...proxySolutions, ...core];
+    structure[0].subItems = [...proxySolutions];
     structure[1].subItems = crawlingTools;
     structure[2].subItems = scrapingSolutions;
     return structure;
-  }, [proxySolutions, crawlingTools, scrapingSolutions, core]);
+  }, [proxySolutions, crawlingTools, scrapingSolutions]);
 
   const handleMenuToggle = (index: number) => {
     setActiveMenuIndex(activeMenuIndex === index ? null : index);
