@@ -1,15 +1,19 @@
 import { Box, Flex, Heading, Text, Button, VStack } from "@chakra-ui/react";
+import PropTypes from 'prop-types';
 
-function HeroSection({ title, subtitle, ctaText, ctaLink, bgImage }) {
+function HeroSection({ title, subtitle, ctas, bgImage }) {
+  // Ensure ctas is an array
+  const ctaButtons = Array.isArray(ctas) ? ctas : [];
+
   return (
     <Box
       bgGradient="linear(to-bl, blue.900, blue.400)"
       py={{ base: 10, md: 15 }}
-      bgImage={bgImage} // Use the provided background image
-      bgSize="cover" // Ensure the image covers the section
-      bgPosition="center" // Center the background image
-      bgRepeat="no-repeat" // Prevent tiling
-      position="relative" // For layering content over the image
+      bgImage={bgImage}
+      bgSize="cover"
+      bgPosition="center"
+      bgRepeat="no-repeat"
+      position="relative"
       _before={{
         content: '""',
         position: "absolute",
@@ -17,7 +21,7 @@ function HeroSection({ title, subtitle, ctaText, ctaLink, bgImage }) {
         left: 0,
         right: 0,
         bottom: 0,
-        bg: "rgba(0, 0, 0, 0.4)", // Optional overlay for readability
+        bg: "rgba(0, 0, 0, 0.4)",
         zIndex: 1,
       }}
     >
@@ -29,10 +33,9 @@ function HeroSection({ title, subtitle, ctaText, ctaLink, bgImage }) {
         align="center"
         justify="space-between"
         gap={{ base: 6, md: 8 }}
-        position="relative" // Ensure content sits above the overlay
-        zIndex={2} // Above the overlay
+        position="relative"
+        zIndex={2}
       >
-        {/* Left Column: Text Content */}
         <VStack
           align="flex-start"
           spacing={6}
@@ -58,13 +61,12 @@ function HeroSection({ title, subtitle, ctaText, ctaLink, bgImage }) {
           </Text>
         </VStack>
 
-        {/* Right Column: Placeholder for Height */}
         <Box
           w={{ base: "100%", md: "50%" }}
           display="flex"
           justifyContent={{ base: "center", md: "flex-end" }}
           alignItems="center"
-          minH={{ base: "300px", md: "400px" }} // Maintains the height of the original image
+          minH={{ base: "300px", md: "400px" }}
         >
           {/* Image removed, but space preserved */}
         </Box>
@@ -77,21 +79,45 @@ function HeroSection({ title, subtitle, ctaText, ctaLink, bgImage }) {
         pb={{ base: 10, md: 20 }}
         position="relative"
         zIndex={2}
+        flexWrap="wrap" // Allow buttons to wrap on smaller screens
       >
-        <Button
+        {ctaButtons.map((cta, index) => (
+          <Button
+          key={index}
           as="a"
-          href={ctaLink}
-          color="white"
-          bg="orange.400"
+          href={cta.link}
+          color={index === 0 ? "white" : "orange.400"} 
+          bg={index === 0 ? "orange.400" : "white"}
           size="lg"
-          _hover={{ bg: "white", color: "orange.400" }}
+          _hover={{ 
+            bg: index === 0 ? "white" : "orange.400", 
+            color: index === 0 ? "orange.400" : "white" 
+          }}
           px={6}
         >
-          {ctaText}
+          {cta.text}
         </Button>
+        ))}
       </Flex>
     </Box>
   );
 }
+
+HeroSection.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  ctas: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+    })
+  ),
+  bgImage: PropTypes.string,
+};
+
+HeroSection.defaultProps = {
+  ctas: [],
+  bgImage: '',
+};
 
 export default HeroSection;

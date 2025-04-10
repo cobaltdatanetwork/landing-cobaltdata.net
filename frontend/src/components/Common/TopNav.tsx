@@ -74,9 +74,6 @@ const useProducts = () => useMemo(() => ({
     { title: "trustedscraper.com", path: "https://trustedscraper.com", description: "Reliable scraping services", icon: FiCheckCircle },
     { title: "trustscraper.com", path: "https://trustscraper.com", description: "Trustworthy scraping tools", icon: FiCheckCircle },
   ],
-  core: [
-    { title: "cobaltdata.net", path: "https://cobaltdata.net", description: "The hub for all Cobalt solutions", icon: FiGlobe },
-  ],
 }), []);
 
 const navStructure: NavItem[] = [
