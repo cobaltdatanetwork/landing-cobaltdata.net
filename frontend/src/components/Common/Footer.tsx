@@ -18,7 +18,7 @@ const Footer = () => {
           <Box>
             <Heading as="h4" size="md" mb={4} color="white">
               <Link href="https://cobaltdata.net" _hover={{ textDecoration: "none", color: "orange.400" }}>
-              Cobalt Data Network
+                cobalt data network
               </Link>
             </Heading>
             <Text color="gray.300" mb={4}>
@@ -37,7 +37,6 @@ const Footer = () => {
               <Link href="https://twitter.com/cobaltdata" isExternal aria-label="Twitter">
                 <Box as="span" color="gray.300" _hover={{ color: "orange.400" }}>Twitter</Box>
               </Link>
-              dzieciak
               <Link href="https://linkedin.com/company/cobaltdata" isExternal aria-label="LinkedIn">
                 <Box as="span" color="gray.300" _hover={{ color: "orange.400" }}>LinkedIn</Box>
               </Link>
@@ -51,7 +50,7 @@ const Footer = () => {
           </Box>
           <Box>
             <Heading as="h4" size="md" mb={2} color="white">Scraping Solutions</Heading>
-            <Text color="gray.400" fontSize="sm" mb={3}>
+            <Text color="gray.400" fontSize="sm" mb={4}> {/* Standardized mb to 4 */}
               Precision scraping tools for extracting valuable web data.
             </Text>
             <VStack align="flex-start" spacing={2}>
@@ -91,7 +90,7 @@ const Footer = () => {
           {/* Crawling Tools */}
           <Box>
             <Heading as="h4" size="md" mb={2} color="white">Crawling Tools</Heading>
-            <Text color="gray.400" fontSize="sm" mb={3}>
+            <Text color="gray.400" fontSize="sm" mb={4}> {/* Standardized mb to 4 */}
               Advanced crawling tools for efficient and reliable web exploration.
             </Text>
             <VStack align="flex-start" spacing={2}>
@@ -115,7 +114,7 @@ const Footer = () => {
           {/* Proxy Solutions */}
           <Box>
             <Heading as="h4" size="md" mb={2} color="white">Proxy Solutions</Heading>
-            <Text color="gray.400" fontSize="sm" mb={3}>
+            <Text color="gray.400" fontSize="sm" mb={4}> {/* Standardized mb to 4 */}
               Robust proxy networks for seamless web data access and anonymity.
             </Text>
             <VStack align="flex-start" spacing={2}>
@@ -132,7 +131,7 @@ const Footer = () => {
         {/* Bottom Footer - Copyright and Legal */}
         <Flex justify="space-between" align="center" borderTop="1px solid" borderColor="gray.700" pt={6} flexWrap="wrap" gap={4}>
           <Text color="gray.400" fontSize="sm">
-            © 2025 <Link href="https://cobaltdata.net" color="gray.300" _hover={{ color: "orange.400" }}>Cobalt Data Network</Link>. All rights reserved.
+            © 2025 <Link href="https://cobaltdata.net" color="gray.300" _hover={{ color: "orange.400" }}>cobalt data network</Link>. All rights reserved.
           </Text>
           <Flex gap={6}>
             <Link href="/privacy" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Privacy Policy</Link>

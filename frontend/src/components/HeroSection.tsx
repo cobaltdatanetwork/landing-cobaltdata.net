@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text, Button, VStack, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Button, VStack } from "@chakra-ui/react";
 
 function HeroSection({ title, subtitle, ctaText, ctaLink, bgImage }) {
   return (
@@ -58,20 +58,15 @@ function HeroSection({ title, subtitle, ctaText, ctaLink, bgImage }) {
           </Text>
         </VStack>
 
-        {/* Right Column: Image (Optional) */}
+        {/* Right Column: Placeholder for Height */}
         <Box
           w={{ base: "100%", md: "50%" }}
           display="flex"
           justifyContent={{ base: "center", md: "flex-end" }}
           alignItems="center"
+          minH={{ base: "300px", md: "400px" }} // Maintains the height of the original image
         >
-          {/* <Image
-            src="/assets/images/hero.png" 
-            alt="Hero Image"
-            maxW={{ base: "300px", md: "400px" }}
-            w="100%"
-            objectFit="contain"
-          /> */}
+          {/* Image removed, but space preserved */}
         </Box>
       </Flex>
 
