@@ -36,20 +36,53 @@ function LandingPage() {
     { name: "trustscraper.com", description: "Trustworthy scraping tools.", link: "https://trustscraper.com" },
   ];
 
+  // Define renderCard before the return statement
+  const renderCard = (site, index) => (
+    <VStack
+      key={index}
+      p={6}
+      bg="white"
+      borderRadius="md"
+      spacing={4}
+      align="stretch"
+      color="gray.800"
+      maxW="360px"
+      w="100%"
+      boxShadow="sm"
+      _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
+    >
+      <Heading as="h4" size="md" fontWeight="medium">
+        {site.name}
+      </Heading>
+      <Text fontSize="sm" color="gray.600">
+        {site.description}
+      </Text>
+      <Link
+        href={site.link}
+        isExternal
+        color="blue.600"
+        fontWeight="medium"
+        alignSelf="flex-start"
+      >
+        Visit {site.name} →
+      </Link>
+    </VStack>
+  );
+
   return (
     <Box>
       {/* Hero Section */}
       <HeroSection
-        title="Cobalt Data Network: Web Data Solutions"
+        title="Cobalt Data Network: Ethical Web Data Solutions"
         subtitle="Explore our advanced suite of proxy and scraping tools designed for scalable, compliant data extraction."
         ctaText="Discover Our Network"
-        ctaLink="/demo-request"
-        bgImage="https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ctaLink="/products"
+        bgImage="https://images.unsplash.com/photo-1551288049-b1f3c0f3a90c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
       />
 
       <Box py={16} bg="blue.50" color="white">
         <Heading as="h2" size="2xl" textAlign="center" mb={12} fontWeight="medium">
-          Network Portfolio
+          The Cobalt Data Network Portfolio
         </Heading>
         <Box maxW="1200px" mx="auto" px={{ base: 4, md: 6 }}>
           {/* Proxy Solutions */}
@@ -65,48 +98,18 @@ function LandingPage() {
               Proxy Solutions
             </Heading>
             <Grid
-              templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} // 2 columns for 2 items
+              templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
               gap={{ base: 4, md: 6 }}
-              justifyContent="center" // Centers the grid content
-              maxW={{ base: "100%", md: "720px" }} // Adjusted to fit 2 cards snugly
-              mx="auto" // Centers the grid horizontally
+              justifyContent="center"
+              maxW={{ base: "100%", md: "720px" }}
+              mx="auto"
             >
-              {allSites.slice(0, 2).map((site, index) => (
-                <VStack
-                  key={index}
-                  p={6}
-                  bg="white"
-                  borderRadius="md"
-                  spacing={4}
-                  align="stretch"
-                  color="gray.800"
-                  maxW="360px" // Consistent card width
-                  w="100%"
-                  boxShadow="sm"
-                  _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
-                >
-                  <Heading as="h4" size="md" fontWeight="medium">
-                    {site.name}
-                  </Heading>
-                  <Text fontSize="sm" color="gray.600">
-                    {site.description}
-                  </Text>
-                  <Link
-                    href={site.link}
-                    isExternal
-                    color="blue.600"
-                    fontWeight="medium"
-                    alignSelf="flex-start"
-                  >
-                    Visit {site.name} →
-                  </Link>
-                </VStack>
-              ))}
+              {allSites.slice(0, 2).map(renderCard)}
             </Grid>
           </Box>
 
-         {/* Crawling Tools */}
-         <Box mb={12}>
+          {/* Crawling Tools */}
+          <Box mb={12}>
             <Heading
               as="h3"
               size="lg"
@@ -122,7 +125,7 @@ function LandingPage() {
                 templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
                 gap={{ base: 4, md: 6 }}
                 justifyItems="center"
-                mb={allSites.slice(2, 7).length % 3 !== 0 ? 0 : 6} // No margin if Flex follows
+                mb={allSites.slice(2, 7).length % 3 !== 0 ? 0 : 6}
               >
                 {allSites.slice(2, 5).map(renderCard)} {/* First full row (3 items) */}
               </Grid>
@@ -131,7 +134,7 @@ function LandingPage() {
                   justify="center"
                   gap={{ base: 4, md: 6 }}
                   flexWrap="wrap"
-                  mt={allSites.slice(2, 7).length > 3 ? 6 : 0} // Margin only if preceded by Grid
+                  mt={alldoubleSites.slice(2, 7).length > 3 ? 6 : 0}
                 >
                   {allSites.slice(5, 7).map(renderCard)} {/* Remaining 2 items */}
                 </Flex>
@@ -156,7 +159,7 @@ function LandingPage() {
                 templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
                 gap={{ base: 4, md: 6 }}
                 justifyItems="center"
-                mb={allSites.slice(7).length % 3 !== 0 ? 0 : 6} // No margin if Flex follows
+                mb={allSites.slice(7).length % 3 !== 0 ? 0 : 6}
               >
                 {allSites.slice(7, 16).map(renderCard)} {/* First 3 full rows (9 items) */}
               </Grid>
@@ -165,7 +168,7 @@ function LandingPage() {
                   justify="center"
                   gap={{ base: 4, md: 6 }}
                   flexWrap="wrap"
-                  mt={allSites.slice(7).length > 3 ? 6 : 0} // Margin only if preceded by Grid
+                  mt={allSites.slice(7).length > 3 ? 6 : 0}
                 >
                   {allSites.slice(16).map(renderCard)} {/* Remaining 1 item */}
                 </Flex>
@@ -177,6 +180,9 @@ function LandingPage() {
 
       {/* Section 3: Why Choose Cobalt Data Network */}
       <Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
+        <Heading as="h2" size="2xl" textAlign="center" mb={10} color="gray.800" fontWeight="medium">
+          Why Cobalt Data Network?
+        </Heading>
         <Flex justify="space-around" flexWrap="wrap" gap={6}>
           {[
             { value: "190+", label: "Countries Covered" },
