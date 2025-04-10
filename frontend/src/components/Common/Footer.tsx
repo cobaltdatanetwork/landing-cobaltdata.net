@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
   return (
-    <Box bg="gray.800" color="white" py={12}>
+    <Box bg="blue.800" color="white" py={12}>
       <Box maxW="1200px" mx="auto" px={4}>
         <Grid templateColumns={{ base: "1fr", md: "2fr 1fr 1fr 1fr" }} gap={8} mb={8}>
           {/* Company Information */}
