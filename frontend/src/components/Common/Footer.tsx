@@ -50,7 +50,7 @@ const Footer = () => {
           </Box>
           <Box>
             <Heading as="h4" size="md" mb={2} color="white">Scraping Solutions</Heading>
-            <Text color="gray.400" fontSize="sm" mb={4} minH="40px"> {/* Fixed height */}
+            <Text color="gray.400" fontSize="sm" mb={4} minH="40px">
               Precision scalable web scraping tools for extracting valuable web data.
             </Text>
             <VStack align="flex-start" spacing={2}>
@@ -86,11 +86,11 @@ const Footer = () => {
               </Link>
             </VStack>
           </Box>
-      
+          
           {/* Crawling Tools */}
           <Box>
             <Heading as="h4" size="md" mb={2} color="white">Crawling Tools</Heading>
-            <Text color="gray.400" fontSize="sm" mb={4} minH="40px"> {/* Fixed height */}
+            <Text color="gray.400" fontSize="sm" mb={4} minH="40px">
               Advanced crawling tools for efficient and reliable web exploration.
             </Text>
             <VStack align="flex-start" spacing={2}>
@@ -111,18 +111,24 @@ const Footer = () => {
               </Link>
             </VStack>
           </Box>
-          {/* Proxy Solutions */}
+          {/* Resources */}
           <Box>
-            <Heading as="h4" size="md" mb={2} color="white">Proxy Solutions</Heading>
-            <Text color="gray.400" fontSize="sm" mb={4} minH="40px"> {/* Fixed height */}
-              Robust proxy networks for seamless web data access and anonymity.
+            <Heading as="h4" size="md" mb={2} color="white">Resources</Heading>
+            <Text color="gray.400" fontSize="sm" mb={4} minH="40px">
+              Learn more about our services and support
             </Text>
             <VStack align="flex-start" spacing={2}>
-              <Link href="https://thedataproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                thedataproxy.com
+              <Link href="/articles" color="gray.300" _hover={{ color: "orange.400" }}>
+                Articles
               </Link>
-              <Link href="https://roamingproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                roamingproxy.com
+              <Link href="/api-docs" color="gray.300" _hover={{ color: "orange.400" }}>
+                Learn how to use our APIs
+              </Link>
+              <Link href="/faq" color="gray.300" _hover={{ color: "orange.400" }}>
+                FAQ
+              </Link>
+              <Link href="/support" color="gray.300" _hover={{ color: "orange.400" }}>
+                Support
               </Link>
             </VStack>
           </Box>
@@ -138,6 +144,10 @@ const Footer = () => {
             <Link href="/terms" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Terms of Service</Link>
             <Link href="/compliance" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Compliance</Link>
             <Link href="/cookie" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Cookie Policy</Link>
+            <Link href="/articles" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Articles</Link>
+            <Link href="/api-docs" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>API Docs</Link>
+            <Link href="/faq" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>FAQ</Link>
+            <Link href="/support" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Support</Link>
           </Flex>
         </Flex>
       </Box>
