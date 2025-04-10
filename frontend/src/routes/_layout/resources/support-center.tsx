@@ -69,18 +69,6 @@ function SupportCenterPage() {
 
   return (
     <>
-      {/* Support Center Hero Section */}
-      <Box py={16} bg="blue.50" color="gray.800">
-        <Box maxW="1200px" mx="auto" px={4}>
-          <Heading as="h1" size="2xl" textAlign="center" mb={8} fontWeight="medium">
-            Cobalt Data Network Support
-          </Heading>
-          <Text fontSize="xl" textAlign="center" mb={8} maxW="800px" mx="auto">
-            Get help with our proxy solutions, crawling tools, and scraping solutions. Access guides, tutorials, or connect with our 24/7 support team.
-          </Text>
-        </Box>
-      </Box>
-
       {/* Support Categories Section */}
       <Box py={16} bg="blue.50">
         <Box maxW="1200px" mx="auto" px={4}>
