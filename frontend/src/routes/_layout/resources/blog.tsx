@@ -167,11 +167,11 @@ function BlogPage() {
           </SimpleGrid>
         </Box>
       </Box>
-
+      
       <Box py={16} bg="blue.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
-          <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">Master Web Scraping Today</Heading>
-          <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">Download our free comprehensive guides...</Text>
+          <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">Unlock Global Data with Our Proxy Network</Heading>
+          <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">Explore our powerful proxy solutions for seamless web access and data collection...</Text>
           <Flex justify="center" gap={6} flexWrap="wrap">
             <Button size="lg" bg="white" color="blue.500" _hover={{ bg: "gray.100" }} as="a" href="/demo-request">Request Demo</Button>
             <Button size="lg" variant="outline" borderColor="white" color="white" _hover={{ bg: "blue.700" }} as="a" href="https://cloud.thedataproxy.com/signup">Start Free Trial</Button>
