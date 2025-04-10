@@ -4,8 +4,6 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import HeroSection from '../../components/HeroSection';
 import Footer from '../../components/Common/Footer';
 
-// Inside return:
-
 export const Route = createFileRoute("/_layout/")({
   component: LandingPage,
 });
@@ -36,37 +34,43 @@ function LandingPage() {
     { name: "trustscraper.com", description: "Trustworthy scraping tools.", link: "https://trustscraper.com" },
   ];
 
-  // Define renderCard before the return statement
   const renderCard = (site, index) => (
-    <VStack
+    <Link
       key={index}
-      p={6}
-      bg="white"
-      borderRadius="md"
-      spacing={4}
-      align="stretch"
-      color="gray.800"
-      maxW="360px"
-      w="100%"
-      boxShadow="sm"
-      _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
+      href={site.link}
+      isExternal
+      _hover={{ textDecoration: "none" }} // Prevents underline on hover for the entire card
     >
-      <Heading as="h4" size="md" fontWeight="medium">
-        {site.name}
-      </Heading>
-      <Text fontSize="sm" color="gray.600">
-        {site.description}
-      </Text>
-      <Link
-        href={site.link}
-        isExternal
-        color="blue.600"
-        fontWeight="medium"
-        alignSelf="flex-start"
+      <VStack
+        p={6}
+        bg="white"
+        borderRadius="md"
+        spacing={4}
+        align="stretch"
+        color="gray.800"
+        maxW="360px"
+        w="100%"
+        boxShadow="sm"
+        _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
       >
-        Visit {site.name} →
-      </Link>
-    </VStack>
+        <Heading as="h4" size="md" fontWeight="medium">
+          {site.name}
+        </Heading>
+        <Text fontSize="sm" color="gray.600">
+          {site.description}
+        </Text>
+        <Link
+          href={site.link}
+          isExternal
+          color="blue.600"
+          fontWeight="medium"
+          alignSelf="flex-start"
+          _hover={{ textDecoration: "underline" }} // Keeps the original underline on hover for the "Visit" link
+        >
+          Visit {site.name} →
+        </Link>
+      </VStack>
+    </Link>
   );
 
   return (
@@ -127,7 +131,7 @@ function LandingPage() {
                 justifyItems="center"
                 mb={allSites.slice(2, 7).length % 3 !== 0 ? 0 : 6}
               >
-                {allSites.slice(2, 5).map(renderCard)} {/* First full row (3 items) */}
+                {allSites.slice(2, 5).map(renderCard)}
               </Grid>
               {allSites.slice(2, 7).length % 3 !== 0 && (
                 <Flex
@@ -136,7 +140,7 @@ function LandingPage() {
                   flexWrap="wrap"
                   mt={allSites.slice(2, 7).length > 3 ? 6 : 0}
                 >
-                  {allSites.slice(5, 7).map(renderCard)} {/* Remaining 2 items */}
+                  {allSites.slice(5, 7).map(renderCard)}
                 </Flex>
               )}
             </Box>
@@ -161,16 +165,16 @@ function LandingPage() {
                 justifyItems="center"
                 mb={allSites.slice(7).length % 3 !== 0 ? 0 : 6}
               >
-                {allSites.slice(7, 16).map(renderCard)} {/* First 3 full rows (9 items) */}
+                {allSites.slice(7, 16).map(renderCard)}
               </Grid>
               {allSites.slice(7).length % 3 !== 0 && (
                 <Flex
                   justify="center"
-                  gap={{ base: 4, md: 6 }}
+                  gap={{ base: "4", md: "6" }}
                   flexWrap="wrap"
                   mt={allSites.slice(7).length > 3 ? 6 : 0}
                 >
-                  {allSites.slice(16).map(renderCard)} {/* Remaining 1 item */}
+                  {allSites.slice(16).map(renderCard)}
                 </Flex>
               )}
             </Box>
@@ -270,7 +274,6 @@ function LandingPage() {
         </Box>
       </Box>
 
-      {/* Footer */}
       <Footer />
     </Box>
   );
