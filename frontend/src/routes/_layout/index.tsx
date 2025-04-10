@@ -73,16 +73,16 @@ function LandingPage() {
     <Box>
       {/* Hero Section */}
       <HeroSection
-        title="Cobalt Data Network: Ethical Web Data Solutions"
+        title="Cobalt Data Network: Web Data Solutions"
         subtitle="Explore our advanced suite of proxy and scraping tools designed for scalable, compliant data extraction."
         ctaText="Discover Our Network"
-        ctaLink="/products"
-        bgImage="https://images.unsplash.com/photo-1551288049-b1f3c0f3a90c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+        ctaLink="/demo-request"
+        bgImage="https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
 
       <Box py={16} bg="blue.50" color="white">
         <Heading as="h2" size="2xl" textAlign="center" mb={12} fontWeight="medium">
-          The Cobalt Data Network Portfolio
+          Network Portfolio
         </Heading>
         <Box maxW="1200px" mx="auto" px={{ base: 4, md: 6 }}>
           {/* Proxy Solutions */}
@@ -134,7 +134,7 @@ function LandingPage() {
                   justify="center"
                   gap={{ base: 4, md: 6 }}
                   flexWrap="wrap"
-                  mt={alldoubleSites.slice(2, 7).length > 3 ? 6 : 0}
+                  mt={allSites.slice(2, 7).length > 3 ? 6 : 0}
                 >
                   {allSites.slice(5, 7).map(renderCard)} {/* Remaining 2 items */}
                 </Flex>
@@ -180,7 +180,7 @@ function LandingPage() {
 
       {/* Section 3: Why Choose Cobalt Data Network */}
       <Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
-        <Heading as="h2" size="2xl" textAlign="center" mb={10} color="gray.800" fontWeight="medium">
+        <Heading as="h2" size="xl" textAlign="center" mb={10} color="gray.800" fontWeight="medium">
           Why Cobalt Data Network?
         </Heading>
         <Flex justify="space-around" flexWrap="wrap" gap={6}>
