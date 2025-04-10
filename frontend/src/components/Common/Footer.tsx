@@ -28,7 +28,8 @@ const Footer = () => {
               <strong>Phone:</strong> <a href="tel:+18554402242">+1 (855) 440-2242</a>
             </Text>
             <Text color="gray.300" mb={4}>
-              <strong>Email:</strong> <Link href="mailto:info@cobaltdata.net" color="gray.300" _hover={{ color: "orange.400" }}>
+              <strong>Email:</strong>{' '}
+              <Link href="mailto:info@cobaltdata.net" color="gray.300" _hover={{ color: "orange.400" }}>
                 info@cobaltdata.net
               </Link>
             </Text>
@@ -48,54 +49,93 @@ const Footer = () => {
             </Text>
           </Box>
 
-          {/* Our Products */}
+          {/* Proxy Solutions */}
           <Box>
-            <Heading as="h4" size="md" mb={4} color="white">Our Products</Heading>
+            <Heading as="h4" size="md" mb={2} color="white">Proxy Solutions</Heading>
+            <Text color="gray.400" fontSize="sm" mb={3}>
+              Robust proxy networks for seamless web data access and anonymity.
+            </Text>
             <VStack align="flex-start" spacing={2}>
-              <Link href="https://thedataproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>TheDataProxy.com</Link>
-              <Link href="https://automatedcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>AutomatedCrawler.com</Link>
-              <Link href="https://automatedscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>AutomatedScraper.com</Link>
-              <Link href="https://cleancrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>CleanCrawler.com</Link>
-              <Link href="https://cleanscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>CleanScraper.com</Link>
-              <Link href="https://cobaltdata.net" isExternal color="gray.300" _hover={{ color: "orange.400" }}>CobaltData.net</Link>
-              <Link href="https://ethicalscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>EthicalScraper.com</Link>
-              <Link href="https://integritycrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>IntegrityCrawler.com</Link>
-              <Link href="https://legalscraping.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>LegalScraping.com</Link>
-              <Link href="https://roamingproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>RoamingProxy.com</Link>
-              <Link href="https://scrapecompass.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>ScrapeCompass.com</Link>
-              <Link href="https://scrapingcompass.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>ScrapingCompass.com</Link>
-              <Link href="https://scrapersafe.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>ScraperSafe.com</Link>
-              <Link href="https://smartscraping.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>SmartScraping.com</Link>
-              <Link href="https://trustcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>TrustCrawler.com</Link>
-              <Link href="https://trustedcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>TrustedCrawler.com</Link>
-              <Link href="https://trustedscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>TrustedScraper.com</Link>
-              <Link href="https://trustscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>TrustScraper.com</Link>
+              <Link href="https://thedataproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                TheDataProxy.com
+              </Link>
+              <Link href="https://roamingproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                RoamingProxy.com
+              </Link>
             </VStack>
           </Box>
 
-          {/* Resources */}
+          {/* Crawling Tools */}
           <Box>
-            <Heading as="h4" size="md" mb={4} color="white">Resources</Heading>
+            <Heading as="h4" size="md" mb={2} color="white">Crawling Tools</Heading>
+            <Text color="gray.400" fontSize="sm" mb={3}>
+              Advanced crawling tools for efficient and reliable web exploration.
+            </Text>
             <VStack align="flex-start" spacing={2}>
-              <Link href="/resources/blog" color="gray.300" _hover={{ color: "orange.400" }}>Articles</Link>
-              <Link href="/resources/faq" color="gray.300" _hover={{ color: "orange.400" }}>FAQ</Link>
-              <Link href="/resources/support-center" color="gray.300" _hover={{ color: "orange.400" }}>Support</Link>
+              <Link href="https://automatedcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                AutomatedCrawler.com
+              </Link>
+              <Link href="https://cleancrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                CleanCrawler.com
+              </Link>
+              <Link href="https://integritycrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                IntegrityCrawler.com
+              </Link>
+              <Link href="https://trustcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                TrustCrawler.com
+              </Link>
+              <Link href="https://trustedcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                TrustedCrawler.com
+              </Link>
             </VStack>
           </Box>
 
-          {/* Company */}
+          {/* Scraping Solutions */}
           <Box>
-            <Heading as="h4" size="md" mb={4} color="white">Company</Heading>
+            <Heading as="h4" size="md" mb={2} color="white">Scraping Solutions</Heading>
+            <Text color="gray.400" fontSize="sm" mb={3}>
+              Precision scraping tools for extracting valuable web data.
+            </Text>
             <VStack align="flex-start" spacing={2}>
-              <Link href="/contact" color="gray.300" _hover={{ color: "orange.400" }}>Contact</Link>
-              <Link href="/about" color="gray.300" _hover={{ color: "orange.400" }}>About</Link>
+              <Link href="https://automatedscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                AutomatedScraper.com
+              </Link>
+              <Link href="https://cleanscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                CleanScraper.com
+              </Link>
+              <Link href="https://ethicalscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                EthicalScraper.com
+              </Link>
+              <Link href="https://legalscraping.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                LegalScraping.com
+              </Link>
+              <Link href="https://scrapecompass.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                ScrapeCompass.com
+              </Link>
+              <Link href="https://scrapingcompass.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                ScrapingCompass.com
+              </Link>
+              <Link href="https://scrapersafe.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                ScraperSafe.com
+              </Link>
+              <Link href="https://smartscraping.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                SmartScraping.com
+              </Link>
+              <Link href="https://trustedscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                TrustedScraper.com
+              </Link>
+              <Link href="https://trustscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                TrustScraper.com
+              </Link>
             </VStack>
           </Box>
         </Grid>
 
         {/* Bottom Footer - Copyright and Legal */}
         <Flex justify="space-between" align="center" borderTop="1px solid" borderColor="gray.700" pt={6} flexWrap="wrap" gap={4}>
-          <Text color="gray.400" fontSize="sm">© 2025 CobaltData. All rights reserved.</Text>
+          <Text color="gray.400" fontSize="sm">
+            © 2025 <Link href="https://cobaltdata.net" color="gray.300" _hover={{ color: "orange.400" }}>CobaltData</Link>. All rights reserved.
+          </Text>
           <Flex gap={6}>
             <Link href="/privacy" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Privacy Policy</Link>
             <Link href="/terms" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Terms of Service</Link>
