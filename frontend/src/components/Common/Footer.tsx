@@ -13,34 +13,25 @@ const Footer = () => {
   return (
     <Box bg="gray.800" color="white" py={12}>
       <Box maxW="1200px" mx="auto" px={4}>
-        {/* Main Footer Content */}
         <Grid templateColumns={{ base: "1fr", md: "2fr 1fr 1fr 1fr" }} gap={8} mb={8}>
           {/* Company Information */}
           <Box>
-          <Heading as="h4" size="md" mb={1} color="white">
-  <Link href="https://cobaltdata.net" _hover={{ textDecoration: "none", color: "orange.400" }}>
-    Cobalt Data Network
-  </Link>
-</Heading>
-<Text color="gray.400" fontSize="sm" mb={2}>
-  <Link href="https://cobaltdata.net" _hover={{ textDecoration: "none", color: "blue.400" }}>
-    Cobalt Data Company
-  </Link>
-</Text>
-          <Text color="gray.300" mb={4}>
-            Enterprise grade proxy infrastructure designed specifically for web scraping, data collection, 
-            and market intelligence needs with unlimited scale and global coverage across 190+ countries.
-          </Text>
-         
-            <Text color="gray.300" mb={4}>
-  <strong>Phone:</strong> <a href="tel:+18554402242">+1 (855) 440-2242</a>
-</Text>
-<Flex align="center" gap={4} mb={4}>
-              <Link href="mailto:info@cobaltdata.net" color="gray.300" _hover={{ color: "orange.400" }}>
-               Email: info@cobaltdata.net
+            <Heading as="h4" size="md" mb={4} color="white">
+              <Link href="https://cobaltdata.net" _hover={{ textDecoration: "none", color: "orange.400" }}>
+                CobaltData
               </Link>
-              
-            </Flex>
+            </Heading>
+            <Text color="gray.300" mb={4}>
+              Enterprise-grade proxy and web scraping solutions with unlimited scale and global coverage across 190+ countries.
+            </Text>
+            <Text color="gray.300" mb={4}>
+              <strong>Phone:</strong> <a href="tel:+18554402242">+1 (855) 440-2242</a>
+            </Text>
+            <Text color="gray.300" mb={4}>
+              <strong>Email:</strong> <Link href="mailto:info@cobaltdata.net" color="gray.300" _hover={{ color: "orange.400" }}>
+                info@cobaltdata.net
+              </Link>
+            </Text>
             <Flex gap={4}>
               <Link href="https://twitter.com/cobaltdata" isExternal aria-label="Twitter">
                 <Box as="span" color="gray.300" _hover={{ color: "orange.400" }}>Twitter</Box>
@@ -52,26 +43,33 @@ const Footer = () => {
                 <Box as="span" color="gray.300" _hover={{ color: "orange.400" }}>GitHub</Box>
               </Link>
             </Flex>
-            <Text color="gray.300" mb={4} pt={4}><strong>Address:</strong> 99 Wall St Suite 5660, New York, NY 10005, USA</Text>
+            <Text color="gray.300" mt={4}>
+              <strong>Address:</strong> 99 Wall St Suite 5660, New York, NY 10005, USA
+            </Text>
           </Box>
 
-          {/* Solutions */}
+          {/* Our Products */}
           <Box>
-            <Heading as="h4" size="md" mb={4} color="white">Solutions</Heading>
+            <Heading as="h4" size="md" mb={4} color="white">Our Products</Heading>
             <VStack align="flex-start" spacing={2}>
-              <Link href="/solutions/market-research" color="gray.300" _hover={{ color: "orange.400" }}>Market Research</Link>
-              <Link href="/tools/https-proxy" color="gray.300" _hover={{ color: "orange.400" }}>HTTPs Request Proxy</Link>
-              <Link href="/tools/rotating-proxy" color="gray.300" _hover={{ color: "orange.400" }}>Rotating Proxy</Link>
-              
-              <Link href="/tools/user-agents" color="gray.300" _hover={{ color: "orange.400" }}>User Agents API</Link>
-              <Link href="/tools/socks5-proxy" color="gray.300" _hover={{ color: "orange.400" }}>SOCKS5 Proxy</Link>
-           
-              <Link href="/solutions/price-monitoring" color="gray.300" _hover={{ color: "orange.400" }}>Price Monitoring</Link>
-              <Link href="/solutions/training-ai" color="gray.300" _hover={{ color: "orange.400" }}>AI Training Datasets</Link>
-              <Link href="/solutions/content-aggregation" color="gray.300" _hover={{ color: "orange.400" }}>Content Aggregation</Link>
-              <Link href="/solutions/lead-generation" color="gray.300" _hover={{ color: "orange.400" }}>Lead Generation</Link>
-              <Link href="/solutions/seo-monitoring" color="gray.300" _hover={{ color: "orange.400" }}>SEO Monitoring</Link>
-              <Link href="/solutions/enterprise" color="gray.300" _hover={{ color: "orange.400" }}>Enterprise</Link>
+              <Link href="https://thedataproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>TheDataProxy.com</Link>
+              <Link href="https://automatedcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>AutomatedCrawler.com</Link>
+              <Link href="https://automatedscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>AutomatedScraper.com</Link>
+              <Link href="https://cleancrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>CleanCrawler.com</Link>
+              <Link href="https://cleanscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>CleanScraper.com</Link>
+              <Link href="https://cobaltdata.net" isExternal color="gray.300" _hover={{ color: "orange.400" }}>CobaltData.net</Link>
+              <Link href="https://ethicalscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>EthicalScraper.com</Link>
+              <Link href="https://integritycrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>IntegrityCrawler.com</Link>
+              <Link href="https://legalscraping.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>LegalScraping.com</Link>
+              <Link href="https://roamingproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>RoamingProxy.com</Link>
+              <Link href="https://scrapecompass.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>ScrapeCompass.com</Link>
+              <Link href="https://scrapingcompass.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>ScrapingCompass.com</Link>
+              <Link href="https://scrapersafe.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>ScraperSafe.com</Link>
+              <Link href="https://smartscraping.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>SmartScraping.com</Link>
+              <Link href="https://trustcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>TrustCrawler.com</Link>
+              <Link href="https://trustedcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>TrustedCrawler.com</Link>
+              <Link href="https://trustedscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>TrustedScraper.com</Link>
+              <Link href="https://trustscraper.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>TrustScraper.com</Link>
             </VStack>
           </Box>
 
@@ -79,20 +77,9 @@ const Footer = () => {
           <Box>
             <Heading as="h4" size="md" mb={4} color="white">Resources</Heading>
             <VStack align="flex-start" spacing={2}>
-          
-            <Link href="/network/locations" color="gray.300" _hover={{ color: "orange.400" }}>Locations</Link>
-              
-            <Link href="/network/status" color="gray.300" _hover={{ color: "orange.400" }}>Status</Link>
-                  
-            <Link href="/network/security" color="gray.300" _hover={{ color: "orange.400" }}>Security</Link>
               <Link href="/resources/blog" color="gray.300" _hover={{ color: "orange.400" }}>Articles</Link>
-               <Link href="/resources/code-examples" color="gray.300" _hover={{ color: "orange.400" }}>Support</Link>
-              <Link href="/resources/web-scraping-guides" color="gray.300" _hover={{ color: "orange.400" }}>Guides</Link> 
-                <Link href="/network/proxy-types" color="gray.300" _hover={{ color: "orange.400" }}>Proxy Types</Link>
               <Link href="/resources/faq" color="gray.300" _hover={{ color: "orange.400" }}>FAQ</Link>
-
-             <Link href="/resources/support-center" color="gray.300" _hover={{ color: "orange.400" }}>Help & Support</Link>
-              <Link href="https://apis.cobaltdata.net/redoc" color="gray.300" _hover={{ color: "orange.400" }}>API Reference</Link>
+              <Link href="/resources/support-center" color="gray.300" _hover={{ color: "orange.400" }}>Support</Link>
             </VStack>
           </Box>
 
@@ -100,72 +87,15 @@ const Footer = () => {
           <Box>
             <Heading as="h4" size="md" mb={4} color="white">Company</Heading>
             <VStack align="flex-start" spacing={2}>
-              <Link href="/pricing" color="gray.300" _hover={{ color: "orange.400" }}>Pricing</Link>
-              <Link href="/contact-sales" color="gray.300" _hover={{ color: "orange.400" }}>Sales</Link>
-              <Link href="https://cloud.cobaltdata.net/login" color="gray.300" _hover={{ color: "orange.400" }}>Log In</Link>
-              <Link href="https://cloud.cobaltdata.net/signup" color="gray.300" _hover={{ color: "orange.400" }}>Sign Up</Link>
               <Link href="/contact" color="gray.300" _hover={{ color: "orange.400" }}>Contact</Link>
-              <Link href="https://cobaltdata.net" color="gray.300" _hover={{ color: "blue.400" }}>Cobalt Data</Link>
+              <Link href="/about" color="gray.300" _hover={{ color: "orange.400" }}>About</Link>
             </VStack>
           </Box>
         </Grid>
 
-        {/* Secondary Footer - Popular Use Cases with Keywords */}
-        <Box borderTop="1px solid" borderColor="gray.700" pt={6} mb={6}>
-          <Heading as="h4" size="sm" mb={4} color="gray.400">Popular Web Scraping Use Cases</Heading>
-          <Flex flexWrap="wrap" gap={4}>
-            <Link href="/use-cases/ecommerce-price-monitoring" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              E-commerce Price Monitoring
-            </Link>
-            <Link href="/use-cases/product-data-extraction" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              Product Data Extraction
-            </Link>
-            <Link href="/use-cases/competitor-analysis" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              Competitor Analysis
-            </Link>
-            <Link href="/use-cases/real-estate-data-scraping" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              Real Estate Data Scraping
-            </Link>
-            <Link href="/use-cases/travel-fare-aggregation" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              Travel Fare Aggregation
-            </Link>
-            <Link href="/use-cases/financial-data-collection" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              Financial Data Collection
-            </Link>
-            <Link href="/use-cases/social-media-monitoring" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              Social Media Monitoring
-            </Link>
-            <Link href="/use-cases/news-aggregation" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              News Aggregation
-            </Link>
-          </Flex>
-        </Box>
-
-        {/* Third Footer - Regions with Keywords */}
-        <Box borderTop="1px solid" borderColor="gray.700" pt={6} mb={6}>
-          <Heading as="h4" size="sm" mb={4} color="gray.400">Global Proxy Coverage</Heading>
-          <Flex flexWrap="wrap" gap={4}>
-            <Link href="/network/north-america" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              North America Proxies
-            </Link>
-            <Link href="/network/europe" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              Europe Proxies
-            </Link>
-            <Link href="/network/asia-pacific" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              Asia-Pacific Proxies
-            </Link>
-            <Link href="/network/south-america" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              South America Proxies
-            </Link>
-            <Link href="/network/middle-east" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>
-              Middle East Proxies
-            </Link>
-          </Flex>
-        </Box>
-
         {/* Bottom Footer - Copyright and Legal */}
         <Flex justify="space-between" align="center" borderTop="1px solid" borderColor="gray.700" pt={6} flexWrap="wrap" gap={4}>
-          <Text color="gray.400" fontSize="sm">© 2025 Cobalt Data Network, Cobalt Data company. All rights reserved.</Text>
+          <Text color="gray.400" fontSize="sm">© 2025 CobaltData. All rights reserved.</Text>
           <Flex gap={6}>
             <Link href="/privacy" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Privacy Policy</Link>
             <Link href="/terms" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Terms of Service</Link>
