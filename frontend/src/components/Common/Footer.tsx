@@ -57,7 +57,7 @@ const Footer = () => {
             </Text>
             <VStack align="flex-start" mb={2} spacing={2}>
               <Link href="https://thedataproxy.com" isExternal color="gray.100" _hover={{ color: "orange.400" }}>
-                thedatproxy.com
+                thedataproxy.com
               </Link>
               <Link href="https://roamingproxy.com" isExternal color="gray.100" _hover={{ color: "orange.400" }}>
                 roamingproxy.com
