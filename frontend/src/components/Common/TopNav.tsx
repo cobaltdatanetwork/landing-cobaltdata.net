@@ -228,7 +228,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
           onClick={() => isMobile && onClose ? onClose() : null}
         >
           {icon && <Icon as={icon} mr={2} color="white" />} {/* Icons set to white */}
-          <Text>{title}</Text>
+          <Text color="white" >{title}</Text>
         </Flex>
       );
     });
