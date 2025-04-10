@@ -357,10 +357,10 @@ function ContentAggregationPage() {
               color="white"
               _hover={{ bg: "teal.600" }}
               as="a"
-              href="https://cloud.cobaltdata.net/signup"
-            >
-              Start Free Trial
-            </Button>
+              href="/contact-sales"
+              >
+           Contact Sales
+              </Button>
           </Flex>
         </Box>
       </Box>

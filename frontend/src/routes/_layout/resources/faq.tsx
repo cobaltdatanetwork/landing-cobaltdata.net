@@ -254,9 +254,9 @@ function FAQPage() {
               color="white"
               _hover={{ bg: "blue.700" }}
               as="a"
-              href="https://cloud.cobaltdata.net/signup"
+              href="/contact-sales"
             >
-              Start Free Trial
+         Contact Sales
             </Button>
           </Flex>
         </Box>
