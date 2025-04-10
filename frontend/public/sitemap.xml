@@ -123,4 +123,10 @@
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
 </url>
+<url>
+  <loc>https://cobaltdata.net/resources/blogs/competitive-price-monitoring-leveraging-web-data-market-intelligence</loc>
+  <lastmod>2025-04-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
 </urlset>
