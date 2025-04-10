@@ -102,7 +102,7 @@ const navStructure: NavItem[] = [
     subItems: [
       { title: "Articles", path: "/resources/blog", description: "Learn how to use our APIs", icon: FiBook },
       { title: "FAQ", path: "/resources/faq", description: "Answers to common questions", icon: FiBook },
-      { title: "Support", path: "https://support.cobaltdata.network", description: "Get help with your projects", icon: FiBook },
+      { title: "Support", path: "/resources/support-center", description: "Get help with your projects", icon: FiBook },
     ],
   },
   { title: "Contact", path: "/contact", description: "Reach out to us" },
@@ -193,7 +193,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                       }}
                       p={2}
                       flex={isMobile ? "none" : "0 0 33.33%"}
-                      minW={isMobile ? "auto" : "200px"}
+                      minW={isMobile ? "auto" : 0}
                     >
                       <Flex align="flex-start">
                         {subItem.icon && <Icon as={subItem.icon} mr={2} mt={1} boxSize={5} color="white" />}
