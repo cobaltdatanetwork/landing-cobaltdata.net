@@ -8,6 +8,7 @@ import {
   Image,
   Link,
   Container,
+  useDisclosure
 } from "@chakra-ui/react";
 import { Link as RouterLink } from "@tanstack/react-router";
 import { 
