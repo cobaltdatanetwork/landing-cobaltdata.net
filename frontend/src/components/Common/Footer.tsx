@@ -48,6 +48,52 @@ const Footer = () => {
               <strong>Address:</strong> 99 Wall St Suite 5660, New York, NY 10005, USA
             </Text>
           </Box>
+
+          {/* Proxy Solutions */}
+          <Box>
+            <Heading as="h4" size="md" mb={2} color="white">Proxy Solutions</Heading>
+            <Text color="gray.400" fontSize="sm" mb={4} minH="40px">
+              Powerful proxy networks for seamless web data collection.
+            </Text>
+            <VStack align="flex-start" spacing={2}>
+              <Link href="https://thedataproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                thedataproxy.com
+              </Link>
+              <Link href="https://roamingproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                roamingproxy.com
+              </Link>
+              <Link href="https://cobaltdata.net" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                cobaltdata.net
+              </Link>
+            </VStack>
+          </Box>
+
+          {/* Crawling Tools */}
+          <Box>
+            <Heading as="h4" size="md" mb={2} color="white">Crawling Tools</Heading>
+            <Text color="gray.400" fontSize="sm" mb={4} minH="40px">
+              Advanced crawling tools for efficient and reliable web exploration.
+            </Text>
+            <VStack align="flex-start" spacing={2}>
+              <Link href="https://automatedcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                automatedcrawler.com
+              </Link>
+              <Link href="https://cleancrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                cleancrawler.com
+              </Link>
+              <Link href="https://integritycrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                integritycrawler.com
+              </Link>
+              <Link href="https://trustcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                trustcrawler.com
+              </Link>
+              <Link href="https://trustedcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
+                trustedcrawler.com
+              </Link>
+            </VStack>
+          </Box>
+
+          {/* Scraping Solutions */}
           <Box>
             <Heading as="h4" size="md" mb={2} color="white">Scraping Solutions</Heading>
             <Text color="gray.400" fontSize="sm" mb={4} minH="40px">
@@ -86,52 +132,6 @@ const Footer = () => {
               </Link>
             </VStack>
           </Box>
-          
-          {/* Crawling Tools */}
-          <Box>
-            <Heading as="h4" size="md" mb={2} color="white">Crawling Tools</Heading>
-            <Text color="gray.400" fontSize="sm" mb={4} minH="40px">
-              Advanced crawling tools for efficient and reliable web exploration.
-            </Text>
-            <VStack align="flex-start" spacing={2}>
-              <Link href="https://automatedcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                automatedcrawler.com
-              </Link>
-              <Link href="https://cleancrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                cleancrawler.com
-              </Link>
-              <Link href="https://integritycrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                integritycrawler.com
-              </Link>
-              <Link href="https://trustcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                trustcrawler.com
-              </Link>
-              <Link href="https://trustedcrawler.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                trustedcrawler.com
-              </Link>
-            </VStack>
-          </Box>
-          {/* Resources */}
-          <Box>
-            <Heading as="h4" size="md" mb={2} color="white">Resources</Heading>
-            <Text color="gray.400" fontSize="sm" mb={4} minH="40px">
-              Learn more about our services and support
-            </Text>
-            <VStack align="flex-start" spacing={2}>
-              <Link href="/articles" color="gray.300" _hover={{ color: "orange.400" }}>
-                Articles
-              </Link>
-              <Link href="/api-docs" color="gray.300" _hover={{ color: "orange.400" }}>
-                Learn how to use our APIs
-              </Link>
-              <Link href="/faq" color="gray.300" _hover={{ color: "orange.400" }}>
-                FAQ
-              </Link>
-              <Link href="/support" color="gray.300" _hover={{ color: "orange.400" }}>
-                Support
-              </Link>
-            </VStack>
-          </Box>
         </Grid>
 
         {/* Bottom Footer - Copyright and Legal */}
@@ -146,7 +146,7 @@ const Footer = () => {
             <Link href="/cookie" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Cookie Policy</Link>
             <Link href="/resources/blog" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Articles</Link>
             <Link href="/resources/faq" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>FAQ</Link>
-            <Link href="/resources/support-center.tsx" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Support</Link>
+            <Link href="/resources/support-center" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Support</Link>
           </Flex>
         </Flex>
       </Box>
