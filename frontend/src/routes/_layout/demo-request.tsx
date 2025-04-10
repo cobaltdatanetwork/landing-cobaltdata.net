@@ -56,7 +56,7 @@ function RequestDemoPage() {
 
     try {
       // To this (with absolute URL):
-      const response = await fetch('https://apis.thedataproxy.com/api/v1/utils/demo-request/', {
+      const response = await fetch('https://apis.cobaltdata.net/api/v1/utils/demo-request/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -221,7 +221,7 @@ function RequestDemoPage() {
                   isChecked={consentChecked}
                   onChange={(e) => setConsentChecked(e.target.checked)}
                 >
-                  I agree to receive communications about The Data Proxy services. I understand that my information will be processed in accordance with the 
+                  I agree to receive communications about Cobalt Data Network services. I understand that my information will be processed in accordance with the 
                   <Button as="a" href="/privacy" variant="link" color="orange.500" mx={1}>Privacy Policy</Button>.
                 </Checkbox>
               </FormControl>

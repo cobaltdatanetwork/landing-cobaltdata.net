@@ -64,7 +64,7 @@ function SalesContactPage() {
       
       console.log("Form data being submitted:", formData);
 
-      const response = await fetch('https://apis.thedataproxy.com/api/v1/utils/contact-sales/', {
+      const response = await fetch('https://apis.cobaltdata.net/api/v1/utils/contact-sales/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -281,7 +281,7 @@ function SalesContactPage() {
                   isChecked={consentChecked}
                   onChange={(e) => setConsentChecked(e.target.checked)}
                 >
-                  I agree to receive communications from The Data Proxy. I understand that my information will be processed in accordance with the 
+                  I agree to receive communications from Cobalt Data Network. I understand that my information will be processed in accordance with the 
                   <Button as="a" href="/privacy" variant="link" color="blue.500" mx={1}>Privacy Policy</Button>.
                 </Checkbox>
               </FormControl>
@@ -384,7 +384,7 @@ function SalesContactPage() {
               <Box>
                 <Text fontWeight="medium">Email Sales</Text>
                 <Text fontSize="sm" color="gray.600">
-      <a href="mailto:sales@thedataproxy.com">sales@thedataproxy.com</a>
+      <a href="mailto:sales@cobaltdata.net">sales@cobaltdata.net</a>
     </Text>
               </Box>
             </Box>

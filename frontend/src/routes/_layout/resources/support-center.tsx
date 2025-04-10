@@ -419,7 +419,7 @@ function SupportCenterPage() {
               color="white"
               _hover={{ bg: "blue.700" }}
               as="a"
-              href="https://cloud.thedataproxy.com/signup"
+              href="https://cloud.cobaltdata.net/signup"
             >
               Start Free Trial
             </Button>

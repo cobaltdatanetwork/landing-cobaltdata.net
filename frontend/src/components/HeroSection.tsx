@@ -56,7 +56,7 @@ function HeroSection() {
       <Flex justify="center" gap={4} pt={4} pb={20}>
         <Button
           as="a"
-          href="https://cloud.thedataproxy.com/signup"
+          href="https://cloud.cobaltdata.net/signup"
           color="white"
           bg="orange.400"
           size="lg"
@@ -66,7 +66,7 @@ function HeroSection() {
         </Button>
         <Button
           as="a"
-          href="https://cloud.thedataproxy.com/login"
+          href="https://cloud.cobaltdata.net/login"
           color="white"
           bg="orange.400"
           size="lg"

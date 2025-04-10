@@ -31,13 +31,13 @@ function TermsPage() {
           {/* Introduction */}
           <Box w="full">
             <Text fontSize="lg" mb={4}>
-              Welcome to The Data Proxy! These Terms and Conditions ("Terms") govern your use of our website at thedataproxy.com 
+              Welcome to Cobalt Data Network! These Terms and Conditions ("Terms") govern your use of our website at cobaltdata.net 
               ("Website"). By accessing or using the Website, you agree to comply with and be bound by these Terms. If you do not agree 
               to these Terms, please do not use our Website.
             </Text>
             <Text fontSize="lg">
               These Terms govern your access to, and use of, the Website and any services or content provided through the Website 
-              (collectively, the "Services"). The Data Proxy is committed to ensuring that your experience with us is positive, 
+              (collectively, the "Services"). Cobalt Data Network is committed to ensuring that your experience with us is positive, 
               secure, and transparent. Please review these Terms carefully to understand your rights and obligations when using 
               our website.
             </Text>
@@ -82,7 +82,7 @@ function TermsPage() {
               2. Changes to the Terms
             </Heading>
             <Text fontSize="md" mb={4}>
-              The Data Proxy reserves the right to amend, modify, or update these Terms at any time without prior notice. All changes 
+              Cobalt Data Network reserves the right to amend, modify, or update these Terms at any time without prior notice. All changes 
               will be posted on this page, and the "Last Updated" date at the top of this page will be revised accordingly. 
               You are encouraged to review these Terms periodically to stay informed of any changes.
             </Text>
@@ -177,7 +177,7 @@ function TermsPage() {
             <Text fontSize="md" mb={4}>
               We may suspend or terminate your access to the Website and its Services at our sole discretion, without notice, for 
               any violation of these Terms or for any other reason deemed necessary. Termination may occur if we believe that you have 
-              violated the rights of The Data Proxy or any third parties, or if we need to comply with legal requirements.
+              violated the rights of Cobalt Data Network or any third parties, or if we need to comply with legal requirements.
             </Text>
             <Text fontSize="md" mb={4}>
               If your access to the Website is terminated, you must immediately stop using all Services provided through the Website, 
@@ -196,7 +196,7 @@ function TermsPage() {
               7. Limitation of Liability
             </Heading>
             <Text fontSize="md" mb={4}>
-              To the fullest extent permitted by law, The Data Proxy and its affiliates will not be liable for any indirect, special, 
+              To the fullest extent permitted by law, Cobalt Data Network and its affiliates will not be liable for any indirect, special, 
               incidental, consequential, or punitive damages, or any loss of profits, revenue, or data arising from your use of the Website 
               or its Services, even if we have been advised of the possibility of such damages.
             </Text>
@@ -234,7 +234,7 @@ function TermsPage() {
               If you have any questions about these Terms, or if you need to contact us for any reason, please reach out to us at:
             </Text>
             <VStack align="start" spacing={2} pl={4}>
-              <Text><strong>Email:</strong> support@thedataproxy.com</Text>
+              <Text><strong>Email:</strong> support@cobaltdata.net</Text>
               <Text><strong>Address:</strong> 99 Wall St Suite 5660, New York, NY 10005, USA</Text>
               <Text><strong>Phone:</strong> +1 (855) 440-2242</Text>
               <Text><strong>Support Hours:</strong> Monday to Friday, 9:00 AM to 5:00 PM EST</Text>
