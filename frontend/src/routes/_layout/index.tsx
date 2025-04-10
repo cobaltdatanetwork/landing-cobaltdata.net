@@ -42,21 +42,21 @@ function LandingPage() {
       _hover={{ textDecoration: "none" }}
     >
       <VStack
-        p={8} // Increased padding from 6 to 8
+        p={8}
         bg="white"
-        borderRadius="lg" // Slightly larger radius for better appearance
-        spacing={6} // Increased spacing from 4 to 6
+        borderRadius="lg"
+        spacing={6}
         align="stretch"
         color="gray.800"
-        maxW="400px" // Increased from 360px to 400px
+        maxW="400px"
         w="100%"
         boxShadow="sm"
         _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
       >
-        <Heading as="h4" size="lg" fontWeight="medium"> {/* Increased from md to lg */}
+        <Heading as="h4" size="md" fontWeight="medium"> {/* Reverted to md */}
           {site.name}
         </Heading>
-        <Text fontSize="md" color="gray.600"> {/* Increased from sm to md */}
+        <Text fontSize="sm" color="gray.500"> {/* Changed to sm and lighter color */}
           {site.description}
         </Text>
         <Link
@@ -65,7 +65,7 @@ function LandingPage() {
           color="blue.600"
           fontWeight="medium"
           alignSelf="flex-start"
-          fontSize="md" // Added to match increased text size
+          fontSize="sm" // Adjusted to sm for consistency
           _hover={{ textDecoration: "underline" }}
         >
           Visit {site.name} →
@@ -106,7 +106,7 @@ function LandingPage() {
               templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }}
               gap={{ base: 4, md: 6 }}
               justifyContent="center"
-              maxW={{ base: "100%", md: "840px" }} // Increased to accommodate larger cards
+              maxW={{ base: "100%", md: "840px" }}
               mx="auto"
             >
               {allSites.slice(0, 2).map(renderCard)}
