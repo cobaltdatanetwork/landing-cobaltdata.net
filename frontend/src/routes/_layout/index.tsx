@@ -113,75 +113,73 @@ function LandingPage() {
             </Grid>
           </Box>
 
-          {/* Crawling Tools */}
-          <Box mb={12}>
-            <Heading
-              as="h3"
-              size="lg"
-              mb={8}
-              fontWeight="medium"
-              textAlign="center"
-              color="gray.800"
-            >
-              Crawling Tools
-            </Heading>
-            <Box>
-              <Grid
-                templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-                gap={{ base: 4, md: 6 }}
-                justifyItems="center"
-                mb={allSites.slice(2, 7).length % 3 !== 0 ? 0 : 6}
-              >
-                {allSites.slice(2, 5).map(renderCard)}
-              </Grid>
-              {allSites.slice(2, 7).length % 3 !== 0 && (
-                <Flex
-                  justify="center"
-                  gap={{ base: 4, md: 6 }}
-                  flexWrap="wrap"
-                  mt={allSites.slice(2, 7).length > 3 ? 6 : 0}
-                >
-                  {allSites.slice(5, 7).map(renderCard)}
-                </Flex>
-              )}
-            </Box>
-          </Box>
+   {/* Crawling Tools */}
+<Box mb={8}> {/* Reduced from mb={12} or mb={16} to mb={8} */}
+  <Heading
+    as="h3"
+    size="xl" // Using xl from your updated version
+    mb={10}
+    fontWeight="semibold"
+    textAlign="center"
+    color="gray.800"
+  >
+    Crawling Tools
+  </Heading>
+  <Box>
+    <Grid
+      templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+      gap={{ base: 6, md: 8 }} // Using updated gap values
+      justifyItems="center"
+      mb={allSites.slice(2, 7).length % 3 !== 0 ? 0 : 8} // Updated to match your larger spacing
+    >
+      {allSites.slice(2, 5).map(renderCard)}
+    </Grid>
+    {allSites.slice(2, 7).length % 3 !== 0 && (
+      <Flex
+        justify="center"
+        gap={{ base: 6, md: 8 }}
+        flexWrap="wrap"
+        mt={allSites.slice(2, 7).length > 3 ? 8 : 0}
+      >
+        {allSites.slice(5, 7).map(renderCard)}
+      </Flex>
+    )}
+  </Box>
+</Box>
 
-          {/* Scraping Solutions */}
-          <Box>
-            <Heading
-              as="h3"
-              size="lg"
-              mb={8}
-              fontWeight="medium"
-              textAlign="center"
-              color="gray.800"
-            >
-              Scraping Solutions
-            </Heading>
-            <Box>
-              <Grid
-                templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-                gap={{ base: 4, md: 6 }}
-                justifyItems="center"
-                mb={allSites.slice(7).length % 3 !== 0 ? 0 : 6}
-              >
-                {allSites.slice(7, 16).map(renderCard)}
-              </Grid>
-              {allSites.slice(7).length % 3 !== 0 && (
-                <Flex
-                  justify="center"
-                  gap={{ base: "4", md: "6" }}
-                  flexWrap="wrap"
-                  mt={allSites.slice(7).length > 3 ? 6 : 0}
-                >
-                  {allSites.slice(16).map(renderCard)}
-                </Flex>
-              )}
-            </Box>
-          </Box>
-        </Box>
-      </Box>
+{/* Scraping Solutions */}
+<Box>
+  <Heading
+    as="h3"
+    size="xl" // Using xl from your updated version
+    mb={10}
+    fontWeight="semibold"
+    textAlign="center"
+    color="gray.800"
+  >
+    Scraping Solutions
+  </Heading>
+  <Box>
+    <Grid
+      templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+      gap={{ base: 6, md: 8 }} // Using updated gap values
+      justifyItems="center"
+      mb={allSites.slice(7).length % 3 !== 0 ? 0 : 8}
+    >
+      {allSites.slice(7, 16).map(renderCard)}
+    </Grid>
+    {allSites.slice(7).length % 3 !== 0 && (
+      <Flex
+        justify="center"
+        gap={{ base: "6", md: "8" }}
+        flexWrap="wrap"
+        mt={allSites.slice(7).length > 3 ? 8 : 0}
+      >
+        {allSites.slice(16).map(renderCard)}
+      </Flex>
+    )}
+  </Box>
+</Box>
 
       {/* Section 3: Why Choose Cobalt Data Network */}
       <Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
