@@ -49,7 +49,7 @@ function LandingPage() {
 
       <Box py={16} bg="blue.50" color="white">
         <Heading as="h2" size="2xl" textAlign="center" mb={12} fontWeight="medium">
-          The Cobalt Data Network Portfolio
+          Network Portfolio
         </Heading>
         <Box maxW="1200px" mx="auto" px={{ base: 4, md: 6 }}>
           {/* Proxy Solutions */}
