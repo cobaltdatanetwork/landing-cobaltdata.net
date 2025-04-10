@@ -73,37 +73,75 @@ function BlogPage() {
 
   return (
     <>
-      <Box py={16} bg="blue.50" color="gray.800">
-        <Box maxW="1200px" mx="auto" px={4}>
-          <Heading as="h1" size="2xl" textAlign="center" mb={6} fontWeight="medium">Guides and Trends</Heading>
-          <Text fontSize="xl" textAlign="center" mb={10} maxW="800px" mx="auto">Expert articles, tutorials, and insights...</Text>
-          <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={10}>
-            {featuredPosts.map((post, index) => post && (
-              <Link key={post.id || `featured-${index}`} href={post.path} _hover={{ textDecoration: "none" }}>
-                <Box bg="white" boxShadow="md" borderRadius="lg" overflow="hidden" cursor="pointer" _hover={{ bg: "gray.50" }} transition="background-color 0.2s">
-                  <Image src={post.image} alt={post.title || 'Untitled'} h="250px" w="full" objectFit="cover" />
-                  <Box p={6}>
-                    <HStack mb={4} spacing={3}>
-                      <Badge colorScheme="blue" px={3} py={1} borderRadius="full">{post.category || 'Uncategorized'}</Badge>
-                      <Flex align="center"><TimeIcon mr={1} color="gray.500" boxSize={3} /><Text fontSize="sm" color="gray.500">{post.readTime || 'N/A'}</Text></Flex>
-                    </HStack>
-                    <Heading as="h3" size="lg" mb={4} fontWeight="medium" lineHeight="1.3">{post.title || 'Untitled'}</Heading>
-
-                    <HStack spacing={2}>
-                            {post.tags && post.tags.map((tag, tagIndex) => (
-                              <Tag key={tagIndex} size="sm" colorScheme="gray" variant="subtle">{tag}</Tag>
-                            ))}
-                          </HStack>
-                    <Divider mt={4} mb={4} />
-                    <Text fontSize="sm" color="gray.600" mb={4}>{post.date || 'No date'}</Text>
-                  </Box>
-                </Box>
-              </Link>
-            ))}
-          </Grid>
-        </Box>
-      </Box>
-
+   <Box py={16} bg="blue.50" color="gray.800">
+  <Box maxW="1200px" mx="auto" px={4}>
+    <Heading as="h1" size="2xl" textAlign="center" mb={6} fontWeight="medium">Guides and Trends</Heading>
+    <Text fontSize="xl" textAlign="center" mb={10} maxW="800px" mx="auto">Expert articles, tutorials, and insights...</Text>
+    <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={10}>
+      {featuredPosts.map((post, index) => post && (
+        <Link key={post.id || `featured-${index}`} href={post.path} _hover={{ textDecoration: "none" }}>
+          <Box
+            bg="white"
+            boxShadow="md"
+            borderRadius="lg"
+            overflow="hidden"
+            cursor="pointer"
+            _hover={{ bg: "gray.50" }}
+            transition="background-color 0.2s"
+            display="flex"
+            flexDirection="column"
+            minH="500px" // Set a minimum height for consistency
+          >
+            <Image src={post.image} alt={post.title || 'Untitled'} h="250px" w="full" objectFit="cover" />
+            <Box
+              p={6}
+              flex="1" // Allow this to grow and fill remaining space
+              display="flex"
+              flexDirection="column"
+              justifyContent="space-between" // Distribute content evenly
+            >
+              <Box>
+                <HStack mb={4} spacing={3}>
+                  <Badge colorScheme="blue" px={3} py={1} borderRadius="full">{post.category || 'Uncategorized'}</Badge>
+                  <Flex align="center">
+                    <TimeIcon mr={1} color="gray.500" boxSize={3} />
+                    <Text fontSize="sm" color="gray.500">{post.readTime || 'N/A'}</Text>
+                  </Flex>
+                </HStack>
+                <Heading
+                  as="h3"
+                  size="lg"
+                  mb={4}
+                  fontWeight="medium"
+                  lineHeight="1.3"
+                  maxH="3.9em" // Limit to ~3 lines (adjust based on font size)
+                  overflow="hidden"
+                  textOverflow="ellipsis"
+                  display="-webkit-box"
+                  sx={{
+                    WebkitLineClamp: 3, // Limit to 3 lines in Webkit browsers
+                    WebkitBoxOrient: "vertical",
+                  }}
+                >
+                  {post.title || 'Untitled'}
+                </Heading>
+                <HStack spacing={2} flexWrap="wrap" maxW="100%" rowGap={2}>
+                  {post.tags && post.tags.slice(0, 4).map((tag, tagIndex) => (
+                    <Tag key={tagIndex} size="sm" colorScheme="gray" variant="subtle">{tag}</Tag>
+                  ))}
+                </HStack>
+              </Box>
+              <Box>
+                <Divider mt={4} mb={4} />
+                <Text fontSize="sm" color="gray.600">{post.date || 'No date'}</Text>
+              </Box>
+            </Box>
+          </Box>
+        </Link>
+      ))}
+    </Grid>
+  </Box>
+</Box>
       <Box py={16} bg="white">
         <Box maxW="1200px" mx="auto" px={4}>
           <Heading textAlign="center" as="h2" size="xl" mb={12} fontWeight="medium">Recent Articles</Heading>
@@ -135,8 +173,8 @@ function BlogPage() {
           <Heading as="h2" size="xl" mb={6} fontWeight="medium" color="white">Master Web Scraping Today</Heading>
           <Text fontSize="lg" mb={10} maxW="700px" mx="auto" color="white">Download our free comprehensive guides...</Text>
           <Flex justify="center" gap={6} flexWrap="wrap">
-            <Button size="lg" bg="white" color="blue.500" _hover={{ bg: "gray.100" }} as="a" href="/contact-sales">Contact Sales</Button>
-            <Button size="lg" variant="outline" borderColor="white" color="white" _hover={{ bg: "blue.700" }} as="a" href="/demo-request">Request Demo</Button>
+            <Button size="lg" bg="white" color="blue.500" _hover={{ bg: "gray.100" }} as="a" href="/demo-request">Request Demo</Button>
+            <Button size="lg" variant="outline" borderColor="white" color="white" _hover={{ bg: "blue.700" }} as="a" href="https://cloud.thedataproxy.com/signup">Start Free Trial</Button>
           </Flex>
         </Box>
       </Box>
