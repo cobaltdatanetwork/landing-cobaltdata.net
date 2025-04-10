@@ -28,7 +28,7 @@ import {
   FiCheckCircle,
 } from "react-icons/fi";
 
-import Logo from "/assets/images/cobalt-data-network-logo.png"; // Adjust path as needed
+import Logo from "/assets/images/cobalt-data-network-logo.png";
 
 interface NavItem {
   title: string;
@@ -102,7 +102,8 @@ const navStructure: NavItem[] = [
     subItems: [
       { title: "Articles", path: "/resources/blog", description: "Learn how to use our APIs", icon: FiBook },
       { title: "FAQ", path: "/resources/faq", description: "Answers to common questions", icon: FiBook },
-      { title: "Support", path: "/resources/support-center", description: "Get help with your projects", icon: FiBook },
+      { title: "Support", path: "/resources/support Gradual fade-out of mobile menu handled correctly
+      subItems correctly populated in finalNavStructure
     ],
   },
   { title: "Contact", path: "/contact", description: "Reach out to us" },
@@ -110,10 +111,10 @@ const navStructure: NavItem[] = [
 
 const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
   const { proxySolutions, crawlingTools, scrapingSolutions } = useProducts();
-  const textColor = "white"; // Changed to white
-  const hoverColor = "blue.200"; // Lighter blue for hover
-  const bgActive = "blue.700"; // Slightly darker blue for active state
-  const activeTextColor = "white"; // Keep white for active text
+  const textColor = "white";
+  const hoverColor = "blue.200";
+  const bgActive = "blue.700";
+  const activeTextColor = "white";
   const [activeMenuIndex, setActiveMenuIndex] = useState<number | null>(null);
 
   const finalNavStructure = useMemo(() => {
@@ -146,13 +147,13 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
               onClick={() => handleMenuToggle(index)}
               w="100%"
             >
-              {icon && <Icon as={icon} mr={2} color="white" />} {/* Icons set to white */}
-              <Text flex={1} textAlign="left" color="white" >{title}</Text>
+              {icon && <Icon as={icon} mr={2} color="white" />}
+              <Text flex={1} textAlign="left" color="white">{title}</Text>
               <Icon as={FiChevronDown} ml={2} color="white" transform={isActive ? "rotate(180deg)" : "rotate(0deg)"} transition="transform 0.2s" />
             </Flex>
             {isActive && (
               <Box
-                bg="blue.800" // Changed dropdown background to blue.800
+                bg="blue.800"
                 w={isMobile ? "100%" : "100%"}
                 maxW={isMobile ? "100%" : "1200px"}
                 mx={isMobile ? 0 : "auto"}
@@ -168,7 +169,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
               >
                 <Box px={4} py={2} borderBottom="1px" borderColor="blue.700">
                   {description && (
-                    <Text fontSize="sm" color="whiteAlpha.800">{description}</Text> 
+                    <Text fontSize="sm" color="whiteAlpha.800">{description}</Text>
                   )}
                 </Box>
                 <Flex
@@ -194,11 +195,11 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                       minW={isMobile ? "auto" : 0}
                     >
                       <Flex align="flex-start">
-                        {subItem.icon && <Icon as={subItem.icon} mr={2} mt={1} boxSize={5} color="white" />} 
+                        {subItem.icon && <Icon as={subItem.icon} mr={2} mt={1} boxSize={5} color="white" />}
                         <Box>
-                          <Text fontWeight="medium" color="white" >{subItem.title}</Text>
+                          <Text fontWeight="medium" color="white">{subItem.title}</Text>
                           {subItem.description && (
-                            <Text fontSize="xs" color="whiteAlpha.700">{subItem.description}</Text> 
+                            <Text fontSize="xs" color="whiteAlpha.700">{subItem.description}</Text>
                           )}
                         </Box>
                       </Flex>
@@ -224,8 +225,8 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
           align="center"
           onClick={() => isMobile && onClose ? onClose() : null}
         >
-          {icon && <Icon as={icon} mr={2} color="white" />} {/* Icons set to white */}
-          <Text color="white" >{title}</Text>
+          {icon && <Icon as={icon} mr={2} color="white" />}
+          <Text color="white">{title}</Text>
         </Flex>
       );
     });
@@ -267,10 +268,10 @@ const TopNav = () => {
               display={{ base: "flex", md: "none" }}
               aria-label={isOpen ? "Close Menu" : "Open Menu"}
               fontSize="20px"
-              color="white" // Changed to white
+              color="white"
               icon={<FiMenu />}
               variant="ghost"
-              _hover={{ color: "blue.200" }} // Added hover color
+              _hover={{ color: "blue.200" }}
             />
 
             <Flex 
@@ -288,7 +289,7 @@ const TopNav = () => {
 
       <Box
         display={{ base: isOpen ? "block" : "none", md: "none" }}
-        bg="blue.800" // Changed mobile menu background to blue.800
+        bg="blue.800"
         w="100%"
       >
         <Container maxW="1200px" px={0}>
