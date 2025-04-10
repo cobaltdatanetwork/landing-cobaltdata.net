@@ -144,10 +144,9 @@ const Footer = () => {
             <Link href="/terms" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Terms of Service</Link>
             <Link href="/compliance" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Compliance</Link>
             <Link href="/cookie" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Cookie Policy</Link>
-            <Link href="/articles" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Articles</Link>
-            <Link href="/api-docs" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>API Docs</Link>
-            <Link href="/faq" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>FAQ</Link>
-            <Link href="/support" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Support</Link>
+            <Link href="/resources/blog" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Articles</Link>
+            <Link href="/resources/faq" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>FAQ</Link>
+            <Link href="/resources/support-center.tsx" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Support</Link>
           </Flex>
         </Flex>
       </Box>
