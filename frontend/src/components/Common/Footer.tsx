@@ -62,9 +62,6 @@ const Footer = () => {
               <Link href="https://roamingproxy.com" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
                 roamingproxy.com
               </Link>
-              <Link href="https://cobaltdata.net" isExternal color="gray.300" _hover={{ color: "orange.400" }}>
-                cobaltdata.net
-              </Link>
             </VStack>
           </Box>
 
