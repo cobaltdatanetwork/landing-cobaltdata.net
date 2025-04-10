@@ -48,220 +48,164 @@ function LandingPage() {
       />
 
       <Box py={16} bg="blue.50" color="white">
-  <Heading as="h2" size="2xl" textAlign="center" mb={12} fontWeight="medium">
-    The Cobalt Data Network Portfolio
-  </Heading>
-  <Box maxW="1200px" mx="auto" px={{ base: 4, md: 6 }}>
-    {/* Proxy Solutions */}
-    <Box mb={12}>
-      <Heading
-        as="h3"
-        size="lg"
-        mb={8}
-        fontWeight="medium"
-        textAlign="center" // Centered heading for better symmetry
-        color="gray.800"
-      >
-        Proxy Solutions
-      </Heading>
-      <Grid
-        templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-        gap={{ base: 4, md: 6 }} // Increased gap for breathing room
-        justifyItems="center" // Centers grid items horizontally
-      >
-        {allSites.slice(0, 3).map((site, index) => (
-          <VStack
-            key={index}
-            p={6}
-            bg="white"
-            borderRadius="md"
-            spacing={4}
-            align="stretch" // Changed to stretch for consistent width
-            color="gray.800"
-            maxW="360px" // Set a max width for uniformity
-            w="100%" // Ensures full width within grid cell
-            boxShadow="sm" // Subtle shadow for depth
-            _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
-          >
-            <Heading as="h4" size="md" fontWeight="medium">
-              {site.name}
-            </Heading>
-            <Text fontSize="sm" color="gray.600">
-              {site.description}
-            </Text>
-            <Link
-              href={site.link}
-              isExternal
-              color="blue.600"
+        <Heading as="h2" size="2xl" textAlign="center" mb={12} fontWeight="medium">
+          The Cobalt Data Network Portfolio
+        </Heading>
+        <Box maxW="1200px" mx="auto" px={{ base: 4, md: 6 }}>
+          {/* Proxy Solutions */}
+          <Box mb={12}>
+            <Heading
+              as="h3"
+              size="lg"
+              mb={8}
               fontWeight="medium"
-              alignSelf="flex-start" // Keeps link aligned to the left
+              textAlign="center"
+              color="gray.800"
             >
-              Visit {site.name} →
-            </Link>
-          </VStack>
-        ))}
-      </Grid>
-    </Box>
+              Proxy Solutions
+            </Heading>
+            <Grid
+              templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+              gap={{ base: 4, md: 6 }}
+              justifyItems="center"
+            >
+              {allSites.slice(0, 2).map((site, index) => ( // Adjusted slice to match your data
+                <VStack
+                  key={index}
+                  p={6}
+                  bg="white"
+                  borderRadius="md"
+                  spacing={4}
+                  align="stretch"
+                  color="gray.800"
+                  maxW="360px"
+                  w="100%"
+                  boxShadow="sm"
+                  _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
+                >
+                  <Heading as="h4" size="md" fontWeight="medium">
+                    {site.name}
+                  </Heading>
+                  <Text fontSize="sm" color="gray.600">
+                    {site.description}
+                  </Text>
+                  <Link
+                    href={site.link}
+                    isExternal
+                    color="blue.600"
+                    fontWeight="medium"
+                    alignSelf="flex-start"
+                  >
+                    Visit {site.name} →
+                  </Link>
+                </VStack>
+              ))}
+            </Grid>
+          </Box>
 
-    <Box py={16} bg="blue.50" color="white">
-  <Heading as="h2" size="2xl" textAlign="center" mb={12} fontWeight="medium">
-    The Cobalt Data Network Portfolio
-  </Heading>
-  <Box maxW="1200px" mx="auto" px={{ base: 4, md: 6 }}>
-    {/* Proxy Solutions */}
-    <Box mb={12}>
-      <Heading
-        as="h3"
-        size="lg"
-        mb={8}
-        fontWeight="medium"
-        textAlign="center"
-        color="gray.800"
-      >
-        Proxy Solutions
-      </Heading>
-      <Grid
-        templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-        gap={{ base: 4, md: 6 }}
-        justifyItems="center"
-      >
-        {allSites.slice(0, 3).map((site, index) => (
-          <VStack
-            key={index}
-            p={6}
-            bg="white"
-            borderRadius="md"
-            spacing={4}
-            align="stretch"
-            color="gray.800"
-            maxW="360px"
-            w="100%"
-            boxShadow="sm"
-            _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
-          >
-            <Heading as="h4" size="md" fontWeight="medium">
-              {site.name}
-            </Heading>
-            <Text fontSize="sm" color="gray.600">
-              {site.description}
-            </Text>
-            <Link
-              href={site.link}
-              isExternal
-              color="blue.600"
+          {/* Crawling Tools */}
+          <Box mb={12}>
+            <Heading
+              as="h3"
+              size="lg"
+              mb={8}
               fontWeight="medium"
-              alignSelf="flex-start"
+              textAlign="center"
+              color="gray.800"
             >
-              Visit {site.name} →
-            </Link>
-          </VStack>
-        ))}
-      </Grid>
-    </Box>
+              Crawling Tools
+            </Heading>
+            <Grid
+              templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+              gap={{ base: 4, md: 6 }}
+              justifyItems="center"
+            >
+              {allSites.slice(2, 7).map((site, index) => ( // Adjusted slice
+                <VStack
+                  key={index}
+                  p={6}
+                  bg="white"
+                  borderRadius="md"
+                  spacing={4}
+                  align="stretch"
+                  color="gray.800"
+                  maxW="360px"
+                  w="100%"
+                  boxShadow="sm"
+                  _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
+                >
+                  <Heading as="h4" size="md" fontWeight="medium">
+                    {site.name}
+                  </Heading>
+                  <Text fontSize="sm" color="gray.600">
+                    {site.description}
+                  </Text>
+                  <Link
+                    href={site.link}
+                    isExternal
+                    color="blue.600"
+                    fontWeight="medium"
+                    alignSelf="flex-start"
+                  >
+                    Visit {site.name} →
+                  </Link>
+                </VStack>
+              ))}
+            </Grid>
+          </Box>
 
-    {/* Crawling Tools */}
-    <Box mb={12}>
-      <Heading
-        as="h3"
-        size="lg"
-        mb={8}
-        fontWeight="medium"
-        textAlign="center"
-        color="gray.800"
-      >
-        Crawling Tools
-      </Heading>
-      <Grid
-        templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-        gap={{ base: 4, md: 6 }}
-        justifyItems="center"
-      >
-        {allSites.slice(3, 8).map((site, index) => (
-          <VStack
-            key={index}
-            p={6}
-            bg="white"
-            borderRadius="md"
-            spacing={4}
-            align="stretch"
-            color="gray.800"
-            maxW="360px"
-            w="100%"
-            boxShadow="sm"
-            _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
-          >
-            <Heading as="h4" size="md" fontWeight="medium">
-              {site.name}
-            </Heading>
-            <Text fontSize="sm" color="gray.600">
-              {site.description}
-            </Text>
-            <Link
-              href={site.link}
-              isExternal
-              color="blue.600"
+          {/* Scraping Solutions */}
+          <Box>
+            <Heading
+              as="h3"
+              size="lg"
+              mb={8}
               fontWeight="medium"
-              alignSelf="flex-start"
+              textAlign="center"
+              color="gray.800"
             >
-              Visit {site.name} →
-            </Link>
-          </VStack>
-        ))}
-      </Grid>
-    </Box>
-
-    {/* Scraping Solutions */}
-    <Box>
-      <Heading
-        as="h3"
-        size="lg"
-        mb={8}
-        fontWeight="medium"
-        textAlign="center"
-        color="gray.800"
-      >
-        Scraping Solutions
-      </Heading>
-      <Grid
-        templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-        gap={{ base: 4, md: 6 }}
-        justifyItems="center"
-      >
-        {allSites.slice(8).map((site, index) => (
-          <VStack
-            key={index}
-            p={6}
-            bg="white"
-            borderRadius="md"
-            spacing={4}
-            align="stretch"
-            color="gray.800"
-            maxW="360px"
-            w="100%"
-            boxShadow="sm"
-            _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
-          >
-            <Heading as="h4" size="md" fontWeight="medium">
-              {site.name}
+              Scraping Solutions
             </Heading>
-            <Text fontSize="sm" color="gray.600">
-              {site.description}
-            </Text>
-            <Link
-              href={site.link}
-              isExternal
-              color="blue.600"
-              fontWeight="medium"
-              alignSelf="flex-start"
+            <Grid
+              templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+              gap={{ base: 4, md: 6 }}
+              justifyItems="center"
             >
-              Visit {site.name} →
-            </Link>
-          </VStack>
-        ))}
-      </Grid>
-    </Box>
-  </Box>
-</Box>
+              {allSites.slice(7).map((site, index) => ( // Adjusted slice
+                <VStack
+                  key={index}
+                  p={6}
+                  bg="white"
+                  borderRadius="md"
+                  spacing={4}
+                  align="stretch"
+                  color="gray.800"
+                  maxW="360px"
+                  w="100%"
+                  boxShadow="sm"
+                  _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
+                >
+                  <Heading as="h4" size="md" fontWeight="medium">
+                    {site.name}
+                  </Heading>
+                  <Text fontSize="sm" color="gray.600">
+                    {site.description}
+                  </Text>
+                  <Link
+                    href={site.link}
+                    isExternal
+                    color="blue.600"
+                    fontWeight="medium"
+                    alignSelf="flex-start"
+                  >
+                    Visit {site.name} →
+                  </Link>
+                </VStack>
+              ))}
+            </Grid>
+          </Box>
+        </Box>
+      </Box>
 
       {/* Section 3: Why Choose Cobalt Data Network */}
       <Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
@@ -302,61 +246,63 @@ function LandingPage() {
       </Box>
 
       <Box py={16} bg="blue.600" color="white">
-  <Box maxW="1200px" mx="auto" px={4} textAlign="center">
-    <Heading
-      as="h2"
-      size={{ base: "lg", md: "xl" }}
-      mb={6}
-      fontWeight="medium"
-      lineHeight="1.3"
-      color="white" // Explicitly set to white
-    >
-      Unlock the Power of Web Data Today
-    </Heading>
-    <Text
-      fontSize={{ base: "md", md: "lg" }}
-      mb={8}
-      maxW="700px"
-      mx="auto"
-      lineHeight="1.6"
-      color="white" // Explicitly set to white
-    >
-      Harness the Cobalt Data Network to transform web data into actionable business insights with ease and confidence.
-    </Text>
-    <Flex
-      justify="center"
-      gap={{ base: 4, md: 6 }}
-      flexWrap="wrap"
-    >
-      <Button
-        size="lg"
-        bg="white"
-        color="blue.600"
-        _hover={{ bg: "gray.200" }}
-        as="a"
-        href="/demo-request"
-        px={6}
-      >
-        Request a Demo
-      </Button>
-      <Button
-        size="lg"
-        variant="outline"
-        borderColor="white"
-        color="white"
-        _hover={{ bg: "white", color: "blue.600" }}
-        as="a"
-        href="/contact"
-        px={6}
-      >
-        Contact Us
-      </Button>
-    </Flex>
-  </Box>
-</Box>
+        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
+          <Heading
+            as="h2"
+            size={{ base: "lg", md: "xl" }}
+            mb={6}
+            fontWeight="medium"
+            lineHeight="1.3"
+            color="white"
+          >
+            Unlock the Power of Web Data Today
+          </Heading>
+          <Text
+            fontSize={{ base: "md", md: "lg" }}
+            mb={8}
+            maxW="700px"
+            mx="auto"
+            lineHeight="1.6"
+            color="white"
+          >
+            Harness the Cobalt Data Network to transform web data into actionable business insights with ease and confidence.
+          </Text>
+          <Flex
+            justify="center"
+            gap={{ base: 4, md: 6 }}
+            flexWrap="wrap"
+          >
+            <Button
+              size="lg"
+              bg="white"
+              color="blue.600"
+              _hover={{ bg: "gray.200" }}
+              as="a"
+              href="/demo-request"
+              px={6}
+            >
+              Request a Demo
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              borderColor="white"
+              color="white"
+              _hover={{ bg: "white", color: "blue.600" }}
+              as="a"
+              href="/contact"
+              px={6}
+            >
+              Contact Us
+            </Button>
+          </Flex>
+        </Box>
+      </Box>
 
       {/* Footer */}
       <Footer />
     </Box>
   );
 }
+
+export default LandingPage;
