@@ -84,19 +84,19 @@ const navStructure: NavItem[] = [
     title: "Proxy Solutions",
     icon: FiGlobe,
     description: "Powerful proxy networks for web data collection",
-    subItems: [], // Populated dynamically
+    subItems: [],
   },
   {
     title: "Crawling Tools",
     icon: FiSearch,
     description: "Advanced tools for exploring the web",
-    subItems: [], // Populated dynamically
+    subItems: [],
   },
   {
     title: "Scraping Solutions",
     icon: FiCode,
     description: "Precision tools for extracting web data",
-    subItems: [], // Populated dynamically
+    subItems: [],
   },
   {
     title: "Resources",
@@ -113,17 +113,17 @@ const navStructure: NavItem[] = [
 
 const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
   const { proxySolutions, crawlingTools, scrapingSolutions, core } = useProducts();
-  const textColor = "gray.800";
-  const hoverColor = "blue.600";
-  const bgActive = "blue.100";
-  const activeTextColor = "blue.800";
+  const textColor = "white"; // Changed to white
+  const hoverColor = "blue.200"; // Lighter blue for hover
+  const bgActive = "blue.700"; // Slightly darker blue for active state
+  const activeTextColor = "white"; // Keep white for active text
   const [activeMenuIndex, setActiveMenuIndex] = useState<number | null>(null);
 
   const finalNavStructure = useMemo(() => {
     const structure = [...navStructure];
-    structure[0].subItems = [...proxySolutions, ...core]; // Proxy Solutions + cobaltdata.net
-    structure[1].subItems = crawlingTools; // Crawling Tools
-    structure[2].subItems = scrapingSolutions; // Scraping Solutions
+    structure[0].subItems = [...proxySolutions, ...core];
+    structure[1].subItems = crawlingTools;
+    structure[2].subItems = scrapingSolutions;
     return structure;
   }, [proxySolutions, crawlingTools, scrapingSolutions, core]);
 
@@ -149,13 +149,13 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
               onClick={() => handleMenuToggle(index)}
               w="100%"
             >
-              {icon && <Icon as={icon} mr={2} />}
-              <Text flex={1} textAlign="left">{title}</Text>
-              <Icon as={FiChevronDown} ml={2} transform={isActive ? "rotate(180deg)" : "rotate(0deg)"} transition="transform 0.2s" />
+              {icon && <Icon as={icon} mr={2} color="white" />} {/* Icons set to white */}
+              <Text flex={1} textAlign="left" color="white" >{title}</Text>
+              <Icon as={FiChevronDown} ml={2} color="white" transform={isActive ? "rotate(180deg)" : "rotate(0deg)"} transition="transform 0.2s" />
             </Flex>
             {isActive && (
               <Box
-                bg="white"
+                bg="blue.800" // Changed dropdown background to blue.800
                 w={isMobile ? "100%" : "100%"}
                 maxW={isMobile ? "100%" : "1200px"}
                 mx={isMobile ? 0 : "auto"}
@@ -169,9 +169,9 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                 boxShadow={isMobile ? "none" : "md"}
                 borderRadius={isMobile ? 0 : "md"}
               >
-                <Box px={4} py={2} borderBottom="1px" borderColor="gray.200">
+                <Box px={4} py={2} borderBottom="1px" borderColor="blue.700">
                   {description && (
-                    <Text fontSize="sm" color="gray.600">{description}</Text>
+                    <Text fontSize="sm" color="whiteAlpha.800">{description}</Text> 
                   )}
                 </Box>
                 <Flex
@@ -187,7 +187,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                       href={subItem.path}
                       isExternal={subItem.path.startsWith("https")}
                       color={textColor}
-                      _hover={{ color: hoverColor, bg: "gray.100" }}
+                      _hover={{ color: hoverColor, bg: "blue.700" }}
                       onClick={() => {
                         if (isMobile && onClose) onClose();
                         setActiveMenuIndex(null);
@@ -196,12 +196,12 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                       flex={isMobile ? "none" : "0 0 25%"}
                       minW={isMobile ? "auto" : 0}
                     >
-                      <Flex align="flex-start"> {/* Changed from "center" to "flex-start" */}
-                        {subItem.icon && <Icon as={subItem.icon} mr={2} mt={1} boxSize={5} />} {/* Increased size and aligned top */}
+                      <Flex align="flex-start">
+                        {subItem.icon && <Icon as={subItem.icon} mr={2} mt={1} boxSize={5} color="white" />} 
                         <Box>
-                          <Text fontWeight="medium">{subItem.title}</Text>
+                          <Text fontWeight="medium" color="white" >{subItem.title}</Text>
                           {subItem.description && (
-                            <Text fontSize="xs" color="gray.500">{subItem.description}</Text>
+                            <Text fontSize="xs" color="whiteAlpha.700">{subItem.description}</Text> 
                           )}
                         </Box>
                       </Flex>
@@ -227,7 +227,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
           align="center"
           onClick={() => isMobile && onClose ? onClose() : null}
         >
-          {icon && <Icon as={icon} mr={2} />}
+          {icon && <Icon as={icon} mr={2} color="white" />} {/* Icons set to white */}
           <Text>{title}</Text>
         </Flex>
       );
@@ -251,7 +251,7 @@ const TopNav = () => {
   return (
     <Box w="100%">
       <Box
-        bg="blue.50"
+        bg="blue.800"
         px={4}
         py={3}
         position="sticky"
@@ -270,9 +270,10 @@ const TopNav = () => {
               display={{ base: "flex", md: "none" }}
               aria-label={isOpen ? "Close Menu" : "Open Menu"}
               fontSize="20px"
-              color="blue.600"
+              color="white" // Changed to white
               icon={<FiMenu />}
               variant="ghost"
+              _hover={{ color: "blue.200" }} // Added hover color
             />
 
             <Flex 
@@ -290,7 +291,7 @@ const TopNav = () => {
 
       <Box
         display={{ base: isOpen ? "block" : "none", md: "none" }}
-        bg="white"
+        bg="blue.800" // Changed mobile menu background to blue.800
         w="100%"
       >
         <Container maxW="1200px" px={0}>
