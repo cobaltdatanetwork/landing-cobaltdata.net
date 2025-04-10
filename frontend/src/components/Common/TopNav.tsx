@@ -196,8 +196,8 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                       flex={isMobile ? "none" : "0 0 25%"}
                       minW={isMobile ? "auto" : 0}
                     >
-                      <Flex align="center">
-                        {subItem.icon && <Icon as={subItem.icon} mr={2} />}
+                      <Flex align="flex-start"> {/* Changed from "center" to "flex-start" */}
+                        {subItem.icon && <Icon as={subItem.icon} mr={2} mt={1} boxSize={5} />} {/* Increased size and aligned top */}
                         <Box>
                           <Text fontWeight="medium">{subItem.title}</Text>
                           {subItem.description && (
