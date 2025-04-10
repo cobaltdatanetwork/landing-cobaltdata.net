@@ -111,4 +111,16 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+  <loc>https://cobaltdata.net/resources/blogs/product-data-extraction-strategies-ecommerce-intelligence-market-analysis</loc>
+  <lastmod>2025-04-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://cobaltdata.net/resources/blogs/lead-generation-strategies-leveraging-web-data-b2b-growth</loc>
+  <lastmod>2025-04-10</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.7</priority>
+</url>
 </urlset>
