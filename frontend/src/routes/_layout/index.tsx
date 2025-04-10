@@ -17,7 +17,6 @@ function LandingPage() {
     // Proxy Solutions
     { name: "TheDataProxy.com", description: "Global proxy network with over 10M IPs.", link: "https://thedataproxy.com" },
     { name: "RoamingProxy.com", description: "Rotating proxies for uninterrupted access.", link: "https://roamingproxy.com" },
-    { name: "CobaltData.net", description: "The core of the Cobalt Data Network.", link: "https://cobaltdata.net" },
     // Crawling Tools
     { name: "AutomatedCrawler.com", description: "Automate complex web crawling tasks.", link: "https://automatedcrawler.com" },
     { name: "CleanCrawler.com", description: "Reliable and clean crawling tools.", link: "https://cleancrawler.com" },
