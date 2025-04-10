@@ -18,11 +18,11 @@ const Footer = () => {
           <Box>
             <Heading as="h4" size="md" mb={4} color="white">
               <Link href="https://cobaltdata.net" _hover={{ textDecoration: "none", color: "orange.400" }}>
-                CobaltData
+              Cobalt Data Network
               </Link>
             </Heading>
             <Text color="gray.300" mb={4}>
-              Enterprise-grade proxy and web scraping solutions with unlimited scale and global coverage across 190+ countries.
+              Scalable proxy and scraping tools delivering global reach across 190+ countries.
             </Text>
             <Text color="gray.300" mb={4}>
               <strong>Phone:</strong> <a href="tel:+18554402242">+1 (855) 440-2242</a>
