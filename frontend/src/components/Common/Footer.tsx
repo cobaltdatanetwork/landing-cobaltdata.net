@@ -63,7 +63,7 @@ const Footer = () => {
                 roamingproxy.com
               </Link>
             </VStack>
-            <Heading as="h4" size="md" mb={2} color="white">Proxy Solutions</Heading>
+            <Heading as="h4" size="md" mb={2} color="white">Resources</Heading>
             <VStack align="flex-start" spacing={2}>
               <Link href="/resources/blog" color="gray.100" _hover={{ color: "orange.400" }}>Articles & Guides</Link>
               <Link href="/resources/faq" color="gray.100" _hover={{ color: "orange.400" }}>FAQ</Link>
@@ -93,9 +93,6 @@ const Footer = () => {
               <Link href="https://trustedcrawler.com" isExternal color="gray.100" _hover={{ color: "orange.400" }}>
                 trustedcrawler.com
               </Link>
-              <Link href="/resources/blog" color="gray.100" _hover={{ color: "orange.400" }}>Articles</Link>
-              <Link href="/resources/faq" color="gray.100" _hover={{ color: "orange.400" }}>FAQ</Link>
-              <Link href="/resources/support-center" color="gray.100" _hover={{ color: "orange.400" }}>Help & Support</Link>
             </VStack>
           </Box>
 
@@ -136,9 +133,6 @@ const Footer = () => {
               <Link href="https://trustscraper.com" isExternal color="gray.100" _hover={{ color: "orange.400" }}>
                 trustscraper.com
               </Link>
-              <Link href="/resources/blog" color="gray.100" _hover={{ color: "orange.400" }}>Articles</Link>
-              <Link href="/resources/faq" color="gray.100" _hover={{ color: "orange.400" }}>FAQ</Link>
-              <Link href="/resources/support-center" color="gray.100" _hover={{ color: "orange.400" }}>Help & Support</Link>
             </VStack>
           </Box>
         </Grid>
@@ -153,9 +147,6 @@ const Footer = () => {
             <Link href="/terms" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Terms of Service</Link>
             <Link href="/compliance" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Compliance</Link>
             <Link href="/cookie" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Cookie Policy</Link>
-            <Link href="/resources/blog" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Articles</Link>
-            <Link href="/resources/faq" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>FAQ</Link>
-            <Link href="/resources/support-center" color="gray.400" fontSize="sm" _hover={{ color: "orange.400" }}>Help & Support</Link>
           </Flex>
         </Flex>
       </Box>
