@@ -57,22 +57,6 @@ function HeroSection({ title, subtitle, ctaText, ctaLink, bgImage }) {
             {subtitle}
           </Text>
         </VStack>
-
-        {/* Right Column: Image (Optional) */}
-        <Box
-          w={{ base: "100%", md: "50%" }}
-          display="flex"
-          justifyContent={{ base: "center", md: "flex-end" }}
-          alignItems="center"
-        >
-          <Image
-            src="/assets/images/hero.png" // Replace with your own image if desired
-            alt="Hero Image"
-            maxW={{ base: "300px", md: "400px" }}
-            w="100%"
-            objectFit="contain"
-          />
-        </Box>
       </Flex>
 
       <Flex
