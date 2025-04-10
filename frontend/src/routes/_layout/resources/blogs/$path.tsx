@@ -94,31 +94,64 @@ function BlogPostDetails() {
   // Format text with bold and italic styles
   const formatText = (text) => {
     if (!text) return '';
-
+  
     const parts = [];
     let remainingText = text;
     let currentIndex = 0;
-
+  
     while (remainingText.length > 0) {
+      // Add link detection
+      const linkStart = remainingText.indexOf('[');
       const boldStart = remainingText.indexOf('**');
       const italicStart = remainingText.indexOf('*');
-
-      if (boldStart === -1 && italicStart === -1) {
+  
+      if (linkStart === -1 && boldStart === -1 && italicStart === -1) {
         parts.push(remainingText);
         break;
       }
-
+  
       const nextMarker = Math.min(
+        linkStart === -1 ? Infinity : linkStart,
         boldStart === -1 ? Infinity : boldStart,
         italicStart === -1 ? Infinity : italicStart
       );
-
+  
       if (nextMarker > 0) {
         parts.push(remainingText.slice(0, nextMarker));
         remainingText = remainingText.slice(nextMarker);
         continue;
       }
-
+  
+      // Handle links - new code
+      if (linkStart === 0) {
+        const closeBracket = remainingText.indexOf(']', 1);
+        if (closeBracket !== -1 && remainingText[closeBracket + 1] === '(') {
+          const closeParenthesis = remainingText.indexOf(')', closeBracket);
+          if (closeParenthesis !== -1) {
+            const linkText = remainingText.slice(1, closeBracket);
+            const linkUrl = remainingText.slice(closeBracket + 2, closeParenthesis);
+            
+            parts.push(
+              <RouterLink
+                key={`link-${currentIndex}`}
+                to={linkUrl}
+                style={{
+                  color: "#3182CE",
+                  fontWeight: "medium",
+                  textDecoration: "none"
+                }}
+              >
+                {linkText}
+              </RouterLink>
+            );
+            remainingText = remainingText.slice(closeParenthesis + 1);
+            currentIndex++;
+            continue;
+          }
+        }
+      }
+  
+      // Existing code for bold and italic
       if (boldStart === 0) {
         const boldEnd = remainingText.indexOf('**', 2);
         if (boldEnd !== -1) {
@@ -132,7 +165,7 @@ function BlogPostDetails() {
           continue;
         }
       }
-
+  
       if (italicStart === 0) {
         const italicEnd = remainingText.indexOf('*', 1);
         if (italicEnd !== -1) {
@@ -146,11 +179,11 @@ function BlogPostDetails() {
           continue;
         }
       }
-
+  
       parts.push(remainingText[0]);
       remainingText = remainingText.slice(1);
     }
-
+  
     return parts;
   };
 
@@ -243,13 +276,20 @@ function BlogPostDetails() {
               {post.excerpt}
             </Text>
           )}
-          <HStack spacing={2} mb={8}>
-            {post.tags && post.tags.map((tag, index) => (
-              <Tag key={index} colorScheme="gray" variant="subtle" size="md">
-                {tag}
-              </Tag>
-            ))}
-          </HStack>
+          <HStack spacing={2} mb={8} flexWrap="wrap" maxW="100%" gap={2}>
+      {post.tags && post.tags.map((tag, index) => (
+        <Tag
+          key={index}
+          colorScheme="gray"
+          variant="subtle"
+          size="md"
+          flex="0 0 calc(25% - 8px)" // 25% width minus spacing
+          mb={2} // Margin bottom for wrapped rows
+        >
+          {tag}
+        </Tag>
+      ))}
+    </HStack>
           <Divider mb={8} />
         </Box>
       </Box>
