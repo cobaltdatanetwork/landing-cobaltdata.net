@@ -182,7 +182,7 @@ function FAQPage() {
                 <Box>
                   <Flex justify="space-between" align="center" mb={2}>
                     <Heading as="h3" size="md" fontWeight="medium">{article.question}</Heading>
-                    <Tag size="sm" colorScheme="blue" m={2} ml={1}>{article.category}</Tag>
+                    <Tag size="sm" colorScheme="blue" mr={4} mb={4} mt={4} ml={2}>{article.category}</Tag>
                   </Flex>
                   <Text color="gray.600" mb={3} noOfLines={3}>{article.answer}</Text>
                 </Box>
