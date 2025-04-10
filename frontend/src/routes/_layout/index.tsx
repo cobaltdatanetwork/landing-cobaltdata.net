@@ -209,9 +209,6 @@ function LandingPage() {
 
       {/* Section 3: Why Choose Cobalt Data Network */}
       <Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
-        <Heading as="h2" size="2xl" textAlign="center" mb={10} color="gray.800" fontWeight="medium">
-          Why Cobalt Data Network?
-        </Heading>
         <Flex justify="space-around" flexWrap="wrap" gap={6}>
           {[
             { value: "190+", label: "Countries Covered" },
