@@ -69,41 +69,62 @@ function LandingPage() {
         </VStack>
       </Box>
 
-      {/* Section 2: All Products */}
       <Box py={16} bg="blue.50" color="white">
-        <Heading as="h2" size="2xl" textAlign="center" mb={10} fontWeight="medium">
-          The Cobalt Data Network Portfolio
-        </Heading>
-        <Box maxW="1200px" mx="auto" px={4}>
-          {/* Proxy Solutions */}
-          <Box mb={12}>
-            <Heading as="h3" size="lg" mb={6} fontWeight="medium">
-              Proxy Solutions
+  <Heading as="h2" size="2xl" textAlign="center" mb={12} fontWeight="medium">
+    The Cobalt Data Network Portfolio
+  </Heading>
+  <Box maxW="1200px" mx="auto" px={{ base: 4, md: 6 }}>
+    {/* Proxy Solutions */}
+    <Box mb={12}>
+      <Heading
+        as="h3"
+        size="lg"
+        mb={8}
+        fontWeight="medium"
+        textAlign="center" // Centered heading for better symmetry
+        color="gray.800"
+      >
+        Proxy Solutions
+      </Heading>
+      <Grid
+        templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+        gap={{ base: 4, md: 6 }} // Increased gap for breathing room
+        justifyItems="center" // Centers grid items horizontally
+      >
+        {allSites.slice(0, 3).map((site, index) => (
+          <VStack
+            key={index}
+            p={6}
+            bg="white"
+            borderRadius="md"
+            spacing={4}
+            align="stretch" // Changed to stretch for consistent width
+            color="gray.800"
+            maxW="360px" // Set a max width for uniformity
+            w="100%" // Ensures full width within grid cell
+            boxShadow="sm" // Subtle shadow for depth
+            _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
+          >
+            <Heading as="h4" size="md" fontWeight="medium">
+              {site.name}
             </Heading>
-            <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={6}>
-              {allSites.slice(0, 3).map((site, index) => (
-                <VStack
-                  key={index}
-                  p={6}
-                  bg="white"
-                  borderRadius="md"
-                  spacing={4}
-                  align="start"
-                  color="gray.800"
-                  _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
-                >
-                  <Heading as="h4" size="md" fontWeight="medium">
-                    {site.name}
-                  </Heading>
-                  <Text>{site.description}</Text>
-                  <Link href={site.link} isExternal color="blue.600" fontWeight="medium">
-                    Visit {site.name} →
-                  </Link>
-                </VStack>
-              ))}
-            </Grid>
-          </Box>
-
+            <Text fontSize="sm" color="gray.600">
+              {site.description}
+            </Text>
+            <Link
+              href={site.link}
+              isExternal
+              color="blue.600"
+              fontWeight="medium"
+              alignSelf="flex-start" // Keeps link aligned to the left
+            >
+              Visit {site.name} →
+            </Link>
+          </VStack>
+        ))}
+      </Grid>
+    </Box>
+    
           {/* Crawling Tools */}
           <Box mb={12}>
             <Heading as="h3" size="lg" mb={6} fontWeight="medium">
@@ -202,16 +223,32 @@ function LandingPage() {
         </Flex>
       </Box>
 
-      {/* Call to Action */}
-      <Box py={16} bg="blue.600" color="white">
+{/* Call to Action */}
+<Box py={16} bg="blue.600" color="white">
         <Box maxW="1200px" mx="auto" px={4} textAlign="center">
-          <Heading as="h2" size="xl" mb={6} fontWeight="medium">
-            Unlock the Power of Web Data
+          <Heading
+            as="h2"
+            size={{ base: "lg", md: "xl" }}
+            mb={6}
+            fontWeight="medium"
+            lineHeight="1.3"
+          >
+            Unlock the Power of Web Data Today
           </Heading>
-          <Text fontSize="lg" mb={10} maxW="700px" mx="auto">
-            Leverage the Cobalt Data Network to turn web data into actionable insights for your business.
+          <Text
+            fontSize={{ base: "md", md: "lg" }}
+            mb={8}
+            maxW="700px"
+            mx="auto"
+            lineHeight="1.6"
+          >
+            Harness the Cobalt Data Network to transform web data into actionable business insights with ease and confidence.
           </Text>
-          <Flex justify="center" gap={6} flexWrap="wrap">
+          <Flex
+            justify="center"
+            gap={{ base: 4, md: 6 }}
+            flexWrap="wrap"
+          >
             <Button
               size="lg"
               bg="white"
@@ -219,6 +256,7 @@ function LandingPage() {
               _hover={{ bg: "gray.200" }}
               as="a"
               href="/demo-request"
+              px={6}
             >
               Request a Demo
             </Button>
@@ -230,6 +268,7 @@ function LandingPage() {
               _hover={{ bg: "white", color: "blue.600" }}
               as="a"
               href="/contact"
+              px={6}
             >
               Contact Us
             </Button>
@@ -242,5 +281,3 @@ function LandingPage() {
     </Box>
   );
 }
-
-export default LandingPage;
