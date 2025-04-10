@@ -19,7 +19,7 @@ function FAQPage() {
 
   const popularQuestions = [
     { 
-      question: "How secure is my data with CobaltData?", 
+      question: "How secure is my data with Cobalt Data Network?", 
       answer: "Cobalt Data Network employs enterprise-grade security measures including SOC 2 Type II compliance, end-to-end encryption for all data (in transit and at rest), regular penetration testing, and role-based access controls. Our infrastructure is hosted in ISO 27001 certified data centers with 99.99% uptime. All customer data is backed up daily with point-in-time recovery options available on Business and Enterprise plans.", 
       views: "14.7K",
       category: "Security & Compliance"
@@ -37,7 +37,7 @@ function FAQPage() {
       category: "Platform & Services"
     },
     { 
-      question: "What are the pricing options for CobaltData?", 
+      question: "What are the pricing options for Cobalt Data Network?", 
       answer: "Cobalt Data Network offers three primary pricing tiers: Standard ($2,500/month), Business ($5,000/month), and Enterprise (custom pricing). Pricing is based on data volume, processing requirements, and selected features. All plans include our core platform, while Business adds advanced analytics, higher throughput limits, and premium support. Enterprise plans offer dedicated infrastructure, custom SLAs, and specialized integration services. We also offer a Starter plan ($750/month) for small businesses with limited data needs. Volume discounts are available with annual contracts.", 
       views: "11.8K",
       category: "Account & Billing"
@@ -50,11 +50,11 @@ function FAQPage() {
       answer: "Cobalt Data Network is a comprehensive data management platform that helps organizations integrate, process, govern, and analyze their data more effectively. Our platform solves key challenges including data silos, poor data quality, complex compliance requirements, and the difficulty of turning raw data into actionable insights. By providing a unified solution for the entire data lifecycle, Cobalt Data Network reduces the complexity, cost, and time required to build and maintain effective data infrastructure while enabling better, data-driven decision making."
     },
     {
-      question: "What are the system requirements for using CobaltData?",
+      question: "What are the system requirements for using Cobalt Data Network?",
       answer: "As a cloud-native SaaS platform, Cobalt Data Network has minimal system requirements. Users need a modern web browser (Chrome, Firefox, Safari, or Edge), reliable internet connection, and appropriate permissions to access your organization's data sources. For the Cobalt Data Network Desktop Companion, we recommend Windows 10/11 or macOS 10.15+ with 8GB RAM and 2GB free disk space. Our mobile app requires iOS 14+ or Android 10+. For on-premises components or high-volume data processing, detailed requirements are provided during implementation planning."
     },
     {
-      question: "How long does it take to implement CobaltData?",
+      question: "How long does it take to implement Cobalt Data Network?",
       answer: "Implementation timeframes vary based on your specific needs and environment complexity. A standard cloud implementation with pre-built connectors typically takes 2-4 weeks from contract signing to production deployment. More complex scenarios involving custom integrations, data migration, or on-premises components may require 6-12 weeks. Our Professional Services team uses a phased approach, allowing you to realize initial value quickly while expanding your implementation incrementally. We provide detailed timelines during the pre-sales process based on your specific requirements."
     },
     {
@@ -90,7 +90,7 @@ function FAQPage() {
       answer: "Cobalt Data Network is built on a modern, cloud-native architecture designed for elastic scalability. Our platform automatically scales both compute and storage resources based on your workload demands, with no manual intervention required. Standard plans support data volumes up to 5TB and processing up to 10 million records per hour. Business plans extend this to 20TB and 50 million records per hour. Enterprise plans offer virtually unlimited scaling capabilities, with customers currently processing petabytes of data and billions of records daily. Our architecture separates storage from compute, allowing each to scale independently for optimal resource utilization and cost efficiency."
     },
     {
-      question: "How can I migrate existing data pipelines to CobaltData?",
+      question: "How can I migrate existing data pipelines to Cobalt Data Network?",
       answer: "Cobalt Data Network provides several approaches to migrate existing data pipelines. Our Migration Assistant can automatically scan and convert pipelines from common tools like Informatica, Talend, or SSIS, preserving business logic and transformations. For custom-built pipelines, our reverse engineering tools analyze data flows and generate equivalent Cobalt Data Network configurations. During migration, our dual-run capability allows both old and new pipelines to operate simultaneously, ensuring validation before full cutover. Our Professional Services team offers migration packages that include assessment, planning, conversion, testing, and knowledge transfer to ensure a smooth transition with minimal risk or business disruption."
     }
   ];
