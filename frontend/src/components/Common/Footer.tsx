@@ -53,7 +53,7 @@ const Footer = () => {
           <Box>
             <Heading as="h4" size="md" mb={2} color="white">Proxy Solutions</Heading>
             <Text color="gray.300" fontSize="sm" mb={4} minH="40px">
-              Powerful proxy networks for seamless web data collection.
+              Powerful proxy networks infrastructure for seamless web data collection.
             </Text>
             <VStack align="flex-start" mb={2} spacing={2}>
               <Link href="https://thedataproxy.com" isExternal color="gray.100" _hover={{ color: "orange.400" }}>
