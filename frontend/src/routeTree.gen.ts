@@ -22,7 +22,7 @@ import { Route as LayoutCookieImport } from './routes/_layout/cookie'
 import { Route as LayoutContactSalesImport } from './routes/_layout/contact-sales'
 import { Route as LayoutContactImport } from './routes/_layout/contact'
 import { Route as LayoutComplianceImport } from './routes/_layout/compliance'
-import { Route as LayoutSolutionsContentAggregationImport } from './routes/_layout/solutions/products'
+import { Route as LayoutSolutionsProductsImport } from './routes/_layout/solutions/products'
 import { Route as LayoutResourcesSupportCenterImport } from './routes/_layout/resources/support-center'
 import { Route as LayoutResourcesFaqImport } from './routes/_layout/resources/faq'
 import { Route as LayoutResourcesBlogImport } from './routes/_layout/resources/blog'
@@ -95,12 +95,11 @@ const LayoutComplianceRoute = LayoutComplianceImport.update({
   getParentRoute: () => LayoutRoute,
 } as any)
 
-const LayoutSolutionsContentAggregationRoute =
-  LayoutSolutionsContentAggregationImport.update({
-    id: '/solutions/content-aggregation',
-    path: '/solutions/content-aggregation',
-    getParentRoute: () => LayoutRoute,
-  } as any)
+const LayoutSolutionsProductsRoute = LayoutSolutionsProductsImport.update({
+  id: '/solutions/products',
+  path: '/solutions/products',
+  getParentRoute: () => LayoutRoute,
+} as any)
 
 const LayoutResourcesSupportCenterRoute =
   LayoutResourcesSupportCenterImport.update({
@@ -229,11 +228,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutResourcesSupportCenterImport
       parentRoute: typeof LayoutImport
     }
-    '/_layout/solutions/content-aggregation': {
-      id: '/_layout/solutions/content-aggregation'
-      path: '/solutions/content-aggregation'
-      fullPath: '/solutions/content-aggregation'
-      preLoaderRoute: typeof LayoutSolutionsContentAggregationImport
+    '/_layout/solutions/products': {
+      id: '/_layout/solutions/products'
+      path: '/solutions/products'
+      fullPath: '/solutions/products'
+      preLoaderRoute: typeof LayoutSolutionsProductsImport
       parentRoute: typeof LayoutImport
     }
     '/_layout/resources/blogs/$path': {
@@ -262,7 +261,7 @@ interface LayoutRouteChildren {
   LayoutResourcesBlogRoute: typeof LayoutResourcesBlogRoute
   LayoutResourcesFaqRoute: typeof LayoutResourcesFaqRoute
   LayoutResourcesSupportCenterRoute: typeof LayoutResourcesSupportCenterRoute
-  LayoutSolutionsContentAggregationRoute: typeof LayoutSolutionsContentAggregationRoute
+  LayoutSolutionsProductsRoute: typeof LayoutSolutionsProductsRoute
   LayoutResourcesBlogsPathRoute: typeof LayoutResourcesBlogsPathRoute
 }
 
@@ -280,8 +279,7 @@ const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutResourcesBlogRoute: LayoutResourcesBlogRoute,
   LayoutResourcesFaqRoute: LayoutResourcesFaqRoute,
   LayoutResourcesSupportCenterRoute: LayoutResourcesSupportCenterRoute,
-  LayoutSolutionsContentAggregationRoute:
-    LayoutSolutionsContentAggregationRoute,
+  LayoutSolutionsProductsRoute: LayoutSolutionsProductsRoute,
   LayoutResourcesBlogsPathRoute: LayoutResourcesBlogsPathRoute,
 }
 
@@ -303,7 +301,7 @@ export interface FileRoutesByFullPath {
   '/resources/blog': typeof LayoutResourcesBlogRoute
   '/resources/faq': typeof LayoutResourcesFaqRoute
   '/resources/support-center': typeof LayoutResourcesSupportCenterRoute
-  '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
+  '/solutions/products': typeof LayoutSolutionsProductsRoute
   '/resources/blogs/$path': typeof LayoutResourcesBlogsPathRoute
 }
 
@@ -321,7 +319,7 @@ export interface FileRoutesByTo {
   '/resources/blog': typeof LayoutResourcesBlogRoute
   '/resources/faq': typeof LayoutResourcesFaqRoute
   '/resources/support-center': typeof LayoutResourcesSupportCenterRoute
-  '/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
+  '/solutions/products': typeof LayoutSolutionsProductsRoute
   '/resources/blogs/$path': typeof LayoutResourcesBlogsPathRoute
 }
 
@@ -341,7 +339,7 @@ export interface FileRoutesById {
   '/_layout/resources/blog': typeof LayoutResourcesBlogRoute
   '/_layout/resources/faq': typeof LayoutResourcesFaqRoute
   '/_layout/resources/support-center': typeof LayoutResourcesSupportCenterRoute
-  '/_layout/solutions/content-aggregation': typeof LayoutSolutionsContentAggregationRoute
+  '/_layout/solutions/products': typeof LayoutSolutionsProductsRoute
   '/_layout/resources/blogs/$path': typeof LayoutResourcesBlogsPathRoute
 }
 
@@ -362,7 +360,7 @@ export interface FileRouteTypes {
     | '/resources/blog'
     | '/resources/faq'
     | '/resources/support-center'
-    | '/solutions/content-aggregation'
+    | '/solutions/products'
     | '/resources/blogs/$path'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -379,7 +377,7 @@ export interface FileRouteTypes {
     | '/resources/blog'
     | '/resources/faq'
     | '/resources/support-center'
-    | '/solutions/content-aggregation'
+    | '/solutions/products'
     | '/resources/blogs/$path'
   id:
     | '__root__'
@@ -397,7 +395,7 @@ export interface FileRouteTypes {
     | '/_layout/resources/blog'
     | '/_layout/resources/faq'
     | '/_layout/resources/support-center'
-    | '/_layout/solutions/content-aggregation'
+    | '/_layout/solutions/products'
     | '/_layout/resources/blogs/$path'
   fileRoutesById: FileRoutesById
 }
@@ -439,7 +437,7 @@ export const routeTree = rootRoute
         "/_layout/resources/blog",
         "/_layout/resources/faq",
         "/_layout/resources/support-center",
-        "/_layout/solutions/content-aggregation",
+        "/_layout/solutions/products",
         "/_layout/resources/blogs/$path"
       ]
     },
@@ -495,8 +493,8 @@ export const routeTree = rootRoute
       "filePath": "_layout/resources/support-center.tsx",
       "parent": "/_layout"
     },
-    "/_layout/solutions/content-aggregation": {
-      "filePath": "_layout/solutions/content-aggregation.tsx",
+    "/_layout/solutions/products": {
+      "filePath": "_layout/solutions/products.tsx",
       "parent": "/_layout"
     },
     "/_layout/resources/blogs/$path": {

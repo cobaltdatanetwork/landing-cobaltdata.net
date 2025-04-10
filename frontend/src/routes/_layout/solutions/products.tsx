@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import Footer from '../../../components/Common/Footer';
 import { CheckCircleIcon } from '@chakra-ui/icons';
 
-export const Route = createFileRoute("/_layout/solutions/content-aggregation")({
+export const Route = createFileRoute("/_layout/solutions/products")({
   component: ContentAggregationPage,
 });
 
