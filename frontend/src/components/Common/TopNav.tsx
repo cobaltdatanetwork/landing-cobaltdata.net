@@ -102,8 +102,7 @@ const navStructure: NavItem[] = [
     subItems: [
       { title: "Articles", path: "/resources/blog", description: "Learn how to use our APIs", icon: FiBook },
       { title: "FAQ", path: "/resources/faq", description: "Answers to common questions", icon: FiBook },
-      { title: "Support", path: "/resources/support Gradual fade-out of mobile menu handled correctly
-      subItems correctly populated in finalNavStructure
+      { title: "Support", path: "/resources/support-center", description: "Get help with your projects", icon: FiBook },
     ],
   },
   { title: "Contact", path: "/contact", description: "Reach out to us" },
@@ -175,8 +174,10 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                 <Flex
                   direction={isMobile ? "column" : "row"}
                   wrap={isMobile ? "nowrap" : "wrap"}
-                  justify={isMobile ? "flex-start" : "space-between"}
+                  justify={isMobile ? "flex-start" : "flex-start"}
+                  align="flex-start"
                   p={4}
+                  gap={4}
                 >
                   {subItems.map((subItem) => (
                     <Box
@@ -191,7 +192,7 @@ const NavItems = ({ onClose, isMobile = false }: NavItemsProps) => {
                         setActiveMenuIndex(null);
                       }}
                       p={2}
-                      flex={isMobile ? "none" : "0 0 25%"}
+                      flex={isMobile ? "none" : "0 0 33.33%"}
                       minW={isMobile ? "auto" : 0}
                     >
                       <Flex align="flex-start">
