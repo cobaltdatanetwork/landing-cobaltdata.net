@@ -53,7 +53,7 @@
   </url>
   <url>
     <loc>https://cobaltdata.net/resources/blog</loc>
-    <lastmod>2025-03-18</lastmod>
+    <lastmod>2025-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -65,7 +65,43 @@
   </url>
   <url>
     <loc>https://cobaltdata.net/resources/blogs/data-collection-methods-transform-business-intelligence</loc>
-    <lastmod>2025-04-10</lastmod>
+    <lastmod>2025-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cobaltdata.net/resources/blogs/advanced-proxy-management-building-resilient-data-collection-systems</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cobaltdata.net/resources/blogs/ethical-web-scraping-best-practices-for-responsible-data-collection</loc>
+    <lastmod>2025-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cobaltdata.net/resources/blogs/data-quality-assurance-building-reliable-business-intelligence-pipelines</loc>
+    <lastmod>2025-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cobaltdata.net/resources/blogs/enterprise-data-collection-architecture-designing-scalable-resilient-systems</loc>
+    <lastmod>2025-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cobaltdata.net/resources/blogs/competitive-intelligence-through-web-data-strategic-approaches-for-market-advantage</loc>
+    <lastmod>2025-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cobaltdata.net/resources/blogs/building-data-driven-organization-creating-culture-analytics-excellence</loc>
+    <lastmod>2025-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
