@@ -4,6 +4,8 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import HeroSection from '../../components/HeroSection';
 import Footer from '../../components/Common/Footer';
 
+// Inside return:
+
 export const Route = createFileRoute("/_layout/")({
   component: LandingPage,
 });
@@ -34,41 +36,37 @@ function LandingPage() {
     { name: "trustscraper.com", description: "Trustworthy scraping tools.", link: "https://trustscraper.com" },
   ];
 
+  // Define renderCard before the return statement
   const renderCard = (site, index) => (
-    <Link
+    <VStack
       key={index}
-      href={site.link}
-      isExternal
-      _hover={{ textDecoration: "none" }} // Prevents underline on hover for the entire card
+      p={6}
+      bg="white"
+      borderRadius="md"
+      spacing={4}
+      align="stretch"
+      color="gray.800"
+      maxW="360px"
+      w="100%"
+      boxShadow="sm"
+      _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
     >
-      <VStack
-        p={6}
-        bg="white"
-        borderRadius="md"
-        spacing={4}
-        align="stretch"
-        color="gray.800"
-        maxW="360px"
-        w="100%"
-        boxShadow="sm"
-        _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
-        cursor="pointer" // Indicates the card is clickable
+      <Heading as="h4" size="md" fontWeight="medium">
+        {site.name}
+      </Heading>
+      <Text fontSize="sm" color="gray.600">
+        {site.description}
+      </Text>
+      <Link
+        href={site.link}
+        isExternal
+        color="blue.600"
+        fontWeight="medium"
+        alignSelf="flex-start"
       >
-        <Heading as="h4" size="md" fontWeight="medium">
-          {site.name}
-        </Heading>
-        <Text fontSize="sm" color="gray.600">
-          {site.description}
-        </Text>
-        <Text
-          color="blue.600"
-          fontWeight="medium"
-          alignSelf="flex-start"
-        >
-          Visit {site.name} →
-        </Text>
-      </VStack>
-    </Link>
+        Visit {site.name} →
+      </Link>
+    </VStack>
   );
 
   return (
@@ -129,7 +127,7 @@ function LandingPage() {
                 justifyItems="center"
                 mb={allSites.slice(2, 7).length % 3 !== 0 ? 0 : 6}
               >
-                {allSites.slice(2, 5).map(renderCard)}
+                {allSites.slice(2, 5).map(renderCard)} {/* First full row (3 items) */}
               </Grid>
               {allSites.slice(2, 7).length % 3 !== 0 && (
                 <Flex
@@ -138,7 +136,7 @@ function LandingPage() {
                   flexWrap="wrap"
                   mt={allSites.slice(2, 7).length > 3 ? 6 : 0}
                 >
-                  {allSites.slice(5, 7).map(renderCard)}
+                  {allSites.slice(5, 7).map(renderCard)} {/* Remaining 2 items */}
                 </Flex>
               )}
             </Box>
@@ -163,7 +161,7 @@ function LandingPage() {
                 justifyItems="center"
                 mb={allSites.slice(7).length % 3 !== 0 ? 0 : 6}
               >
-                {allSites.slice(7, 16).map(renderCard)}
+                {allSites.slice(7, 16).map(renderCard)} {/* First 3 full rows (9 items) */}
               </Grid>
               {allSites.slice(7).length % 3 !== 0 && (
                 <Flex
@@ -172,7 +170,7 @@ function LandingPage() {
                   flexWrap="wrap"
                   mt={allSites.slice(7).length > 3 ? 6 : 0}
                 >
-                  {allSites.slice(16).map(renderCard)}
+                  {allSites.slice(16).map(renderCard)} {/* Remaining 1 item */}
                 </Flex>
               )}
             </Box>
@@ -272,6 +270,7 @@ function LandingPage() {
         </Box>
       </Box>
 
+      {/* Footer */}
       <Footer />
     </Box>
   );
