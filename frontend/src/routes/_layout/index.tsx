@@ -48,27 +48,6 @@ function LandingPage() {
         bgImage="https://images.unsplash.com/photo-1551288049-b1f3c0f3a90c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
       />
 
-      {/* Section 1: Introduction */}
-      <Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
-        <VStack spacing={6} textAlign="center">
-          <Heading as="h2" size="2xl" color="gray.800" fontWeight="medium">
-            Your Gateway to Web Data Excellence
-          </Heading>
-          <Text fontSize="lg" color="gray.600" maxW="800px">
-            The Cobalt Data Network powers innovative solutions like TheDataProxy.com and EthicalScraper.com, enabling businesses to extract web insights with efficiency and integrity.
-          </Text>
-          <Button
-            size="lg"
-            bg="blue.600"
-            color="white"
-            _hover={{ bg: "blue.700" }}
-            onClick={() => navigate({ to: "/about" })}
-          >
-            About the Network
-          </Button>
-        </VStack>
-      </Box>
-
       <Box py={16} bg="blue.50" color="white">
   <Heading as="h2" size="2xl" textAlign="center" mb={12} fontWeight="medium">
     The Cobalt Data Network Portfolio
@@ -124,66 +103,166 @@ function LandingPage() {
         ))}
       </Grid>
     </Box>
-    
-          {/* Crawling Tools */}
-          <Box mb={12}>
-            <Heading as="h3" size="lg" mb={6} fontWeight="medium">
-              Crawling Tools
-            </Heading>
-            <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={6}>
-              {allSites.slice(3, 8).map((site, index) => (
-                <VStack
-                  key={index}
-                  p={6}
-                  bg="white"
-                  borderRadius="md"
-                  spacing={4}
-                  align="start"
-                  color="gray.800"
-                  _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
-                >
-                  <Heading as="h4" size="md" fontWeight="medium">
-                    {site.name}
-                  </Heading>
-                  <Text>{site.description}</Text>
-                  <Link href={site.link} isExternal color="blue.600" fontWeight="medium">
-                    Visit {site.name} →
-                  </Link>
-                </VStack>
-              ))}
-            </Grid>
-          </Box>
 
-          {/* Scraping Solutions */}
-          <Box>
-            <Heading as="h3" size="lg" mb={6} fontWeight="medium">
-              Scraping Solutions
+    <Box py={16} bg="blue.50" color="white">
+  <Heading as="h2" size="2xl" textAlign="center" mb={12} fontWeight="medium">
+    The Cobalt Data Network Portfolio
+  </Heading>
+  <Box maxW="1200px" mx="auto" px={{ base: 4, md: 6 }}>
+    {/* Proxy Solutions */}
+    <Box mb={12}>
+      <Heading
+        as="h3"
+        size="lg"
+        mb={8}
+        fontWeight="medium"
+        textAlign="center"
+        color="gray.800"
+      >
+        Proxy Solutions
+      </Heading>
+      <Grid
+        templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+        gap={{ base: 4, md: 6 }}
+        justifyItems="center"
+      >
+        {allSites.slice(0, 3).map((site, index) => (
+          <VStack
+            key={index}
+            p={6}
+            bg="white"
+            borderRadius="md"
+            spacing={4}
+            align="stretch"
+            color="gray.800"
+            maxW="360px"
+            w="100%"
+            boxShadow="sm"
+            _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
+          >
+            <Heading as="h4" size="md" fontWeight="medium">
+              {site.name}
             </Heading>
-            <Grid templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }} gap={6}>
-              {allSites.slice(8).map((site, index) => (
-                <VStack
-                  key={index}
-                  p={6}
-                  bg="white"
-                  borderRadius="md"
-                  spacing={4}
-                  align="start"
-                  color="gray.800"
-                  _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
-                >
-                  <Heading as="h4" size="md" fontWeight="medium">
-                    {site.name}
-                  </Heading>
-                  <Text>{site.description}</Text>
-                  <Link href={site.link} isExternal color="blue.600" fontWeight="medium">
-                    Visit {site.name} →
-                  </Link>
-                </VStack>
-              ))}
-            </Grid>
-          </Box>
-        </Box>
-      </Box>
+            <Text fontSize="sm" color="gray.600">
+              {site.description}
+            </Text>
+            <Link
+              href={site.link}
+              isExternal
+              color="blue.600"
+              fontWeight="medium"
+              alignSelf="flex-start"
+            >
+              Visit {site.name} →
+            </Link>
+          </VStack>
+        ))}
+      </Grid>
+    </Box>
+
+    {/* Crawling Tools */}
+    <Box mb={12}>
+      <Heading
+        as="h3"
+        size="lg"
+        mb={8}
+        fontWeight="medium"
+        textAlign="center"
+        color="gray.800"
+      >
+        Crawling Tools
+      </Heading>
+      <Grid
+        templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+        gap={{ base: 4, md: 6 }}
+        justifyItems="center"
+      >
+        {allSites.slice(3, 8).map((site, index) => (
+          <VStack
+            key={index}
+            p={6}
+            bg="white"
+            borderRadius="md"
+            spacing={4}
+            align="stretch"
+            color="gray.800"
+            maxW="360px"
+            w="100%"
+            boxShadow="sm"
+            _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
+          >
+            <Heading as="h4" size="md" fontWeight="medium">
+              {site.name}
+            </Heading>
+            <Text fontSize="sm" color="gray.600">
+              {site.description}
+            </Text>
+            <Link
+              href={site.link}
+              isExternal
+              color="blue.600"
+              fontWeight="medium"
+              alignSelf="flex-start"
+            >
+              Visit {site.name} →
+            </Link>
+          </VStack>
+        ))}
+      </Grid>
+    </Box>
+
+    {/* Scraping Solutions */}
+    <Box>
+      <Heading
+        as="h3"
+        size="lg"
+        mb={8}
+        fontWeight="medium"
+        textAlign="center"
+        color="gray.800"
+      >
+        Scraping Solutions
+      </Heading>
+      <Grid
+        templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+        gap={{ base: 4, md: 6 }}
+        justifyItems="center"
+      >
+        {allSites.slice(8).map((site, index) => (
+          <VStack
+            key={index}
+            p={6}
+            bg="white"
+            borderRadius="md"
+            spacing={4}
+            align="stretch"
+            color="gray.800"
+            maxW="360px"
+            w="100%"
+            boxShadow="sm"
+            _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
+          >
+            <Heading as="h4" size="md" fontWeight="medium">
+              {site.name}
+            </Heading>
+            <Text fontSize="sm" color="gray.600">
+              {site.description}
+            </Text>
+            <Link
+              href={site.link}
+              isExternal
+              color="blue.600"
+              fontWeight="medium"
+              alignSelf="flex-start"
+            >
+              Visit {site.name} →
+            </Link>
+          </VStack>
+        ))}
+      </Grid>
+    </Box>
+  </Box>
+</Box>
 
       {/* Section 3: Why Choose Cobalt Data Network */}
       <Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
@@ -223,58 +302,59 @@ function LandingPage() {
         </Flex>
       </Box>
 
-{/* Call to Action */}
-<Box py={16} bg="blue.600" color="white">
-        <Box maxW="1200px" mx="auto" px={4} textAlign="center">
-          <Heading
-            as="h2"
-            size={{ base: "lg", md: "xl" }}
-            mb={6}
-            fontWeight="medium"
-            lineHeight="1.3"
-          >
-            Unlock the Power of Web Data Today
-          </Heading>
-          <Text
-            fontSize={{ base: "md", md: "lg" }}
-            mb={8}
-            maxW="700px"
-            mx="auto"
-            lineHeight="1.6"
-          >
-            Harness the Cobalt Data Network to transform web data into actionable business insights with ease and confidence.
-          </Text>
-          <Flex
-            justify="center"
-            gap={{ base: 4, md: 6 }}
-            flexWrap="wrap"
-          >
-            <Button
-              size="lg"
-              bg="white"
-              color="blue.600"
-              _hover={{ bg: "gray.200" }}
-              as="a"
-              href="/demo-request"
-              px={6}
-            >
-              Request a Demo
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              borderColor="white"
-              color="white"
-              _hover={{ bg: "white", color: "blue.600" }}
-              as="a"
-              href="/contact"
-              px={6}
-            >
-              Contact Us
-            </Button>
-          </Flex>
-        </Box>
-      </Box>
+      <Box py={16} bg="blue.600" color="white">
+  <Box maxW="1200px" mx="auto" px={4} textAlign="center">
+    <Heading
+      as="h2"
+      size={{ base: "lg", md: "xl" }}
+      mb={6}
+      fontWeight="medium"
+      lineHeight="1.3"
+      color="white" // Explicitly set to white
+    >
+      Unlock the Power of Web Data Today
+    </Heading>
+    <Text
+      fontSize={{ base: "md", md: "lg" }}
+      mb={8}
+      maxW="700px"
+      mx="auto"
+      lineHeight="1.6"
+      color="white" // Explicitly set to white
+    >
+      Harness the Cobalt Data Network to transform web data into actionable business insights with ease and confidence.
+    </Text>
+    <Flex
+      justify="center"
+      gap={{ base: 4, md: 6 }}
+      flexWrap="wrap"
+    >
+      <Button
+        size="lg"
+        bg="white"
+        color="blue.600"
+        _hover={{ bg: "gray.200" }}
+        as="a"
+        href="/demo-request"
+        px={6}
+      >
+        Request a Demo
+      </Button>
+      <Button
+        size="lg"
+        variant="outline"
+        borderColor="white"
+        color="white"
+        _hover={{ bg: "white", color: "blue.600" }}
+        as="a"
+        href="/contact"
+        px={6}
+      >
+        Contact Us
+      </Button>
+    </Flex>
+  </Box>
+</Box>
 
       {/* Footer */}
       <Footer />
