@@ -53,10 +53,10 @@ function LandingPage() {
         boxShadow="sm"
         _hover={{ shadow: "lg", transform: "translateY(-4px)", transition: "all 0.3s" }}
       >
-        <Heading as="h4" size="md" fontWeight="medium"> {/* Reverted to md */}
+        <Heading as="h4" size="md" fontWeight="medium"> 
           {site.name}
         </Heading>
-        <Text fontSize="sm" color="gray.500"> {/* Changed to sm and lighter color */}
+        <Text fontSize="sm" color="gray.500"> 
           {site.description}
         </Text>
         <Link
@@ -65,7 +65,7 @@ function LandingPage() {
           color="blue.600"
           fontWeight="medium"
           alignSelf="flex-start"
-          fontSize="sm" // Adjusted to sm for consistency
+          fontSize="sm" 
           _hover={{ textDecoration: "underline" }}
         >
           Visit {site.name} →
@@ -117,11 +117,11 @@ function LandingPage() {
 
 
       {/* Crawling Tools */}
-<Box mb={8}> {/* Reduced from mb={12} */}
+<Box mb={8}> 
   <Heading
     as="h3"
     size="lg"
-    mb={6} {/* Reduced from mb={8} */}
+    mb={6}
     fontWeight="medium"
     textAlign="center"
     color="gray.800"
@@ -131,18 +131,18 @@ function LandingPage() {
   <Box>
     <Grid
       templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-      gap={{ base: 2, md: 4 }} {/* Reduced from 4/6 to 2/4 */}
+      gap={{ base: 2, md: 4 }} 
       justifyItems="center"
-      mb={allSites.slice(2, 7).length % 3 !== 0 ? 0 : 4} {/* Reduced from 6 */}
+      mb={allSites.slice(2, 7).length % 3 !== 0 ? 0 : 4} 
     >
       {allSites.slice(2, 5).map(renderCard)}
     </Grid>
     {allSites.slice(2, 7).length % 3 !== 0 && (
       <Flex
         justify="center"
-        gap={{ base: 2, md: 4 }} {/* Reduced from 4/6 to 2/4 */}
+        gap={{ base: 2, md: 4 }} 
         flexWrap="wrap"
-        mt={allSites.slice(2, 7).length > 3 ? 4 : 0} {/* Reduced from 6 */}
+        mt={allSites.slice(2, 7).length > 3 ? 4 : 0} 
       >
         {allSites.slice(5, 7).map(renderCard)}
       </Flex>
@@ -155,7 +155,7 @@ function LandingPage() {
   <Heading
     as="h3"
     size="lg"
-    mb={6} {/* Reduced from mb={8} */}
+    mb={6} 
     fontWeight="medium"
     textAlign="center"
     color="gray.800"
@@ -165,18 +165,18 @@ function LandingPage() {
   <Box>
     <Grid
       templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-      gap={{ base: 2, md: 4 }} {/* Reduced from 4/6 to 2/4 */}
+      gap={{ base: 2, md: 4 }} 
       justifyItems="center"
-      mb={allSites.slice(7).length % 3 !== 0 ? 0 : 4} {/* Reduced from 6 */}
+      mb={allSites.slice(7).length % 3 !== 0 ? 0 : 4} 
     >
       {allSites.slice(7, 16).map(renderCard)}
     </Grid>
     {allSites.slice(7).length % 3 !== 0 && (
       <Flex
         justify="center"
-        gap={{ base: 2, md: 4 }} {/* Reduced from 4/6 to 2/4 */}
+        gap={{ base: 2, md: 4 }} 
         flexWrap="wrap"
-        mt={allSites.slice(7).length > 3 ? 4 : 0} {/* Reduced from 6 */}
+        mt={allSites.slice(7).length > 3 ? 4 : 0}
       >
         {allSites.slice(16).map(renderCard)}
       </Flex>
