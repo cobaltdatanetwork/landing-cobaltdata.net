@@ -113,13 +113,16 @@ function LandingPage() {
             </Grid>
           </Box>
 
-   {/* Crawling Tools */}
-<Box mb={8}> {/* Reduced from mb={12} or mb={16} to mb={8} */}
+
+
+
+      {/* Crawling Tools */}
+<Box mb={8}> {/* Reduced from mb={12} */}
   <Heading
     as="h3"
-    size="xl" // Using xl from your updated version
-    mb={10}
-    fontWeight="semibold"
+    size="lg"
+    mb={6} {/* Reduced from mb={8} */}
+    fontWeight="medium"
     textAlign="center"
     color="gray.800"
   >
@@ -128,18 +131,18 @@ function LandingPage() {
   <Box>
     <Grid
       templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-      gap={{ base: 6, md: 8 }} // Using updated gap values
+      gap={{ base: 2, md: 4 }} {/* Reduced from 4/6 to 2/4 */}
       justifyItems="center"
-      mb={allSites.slice(2, 7).length % 3 !== 0 ? 0 : 8} // Updated to match your larger spacing
+      mb={allSites.slice(2, 7).length % 3 !== 0 ? 0 : 4} {/* Reduced from 6 */}
     >
       {allSites.slice(2, 5).map(renderCard)}
     </Grid>
     {allSites.slice(2, 7).length % 3 !== 0 && (
       <Flex
         justify="center"
-        gap={{ base: 6, md: 8 }}
+        gap={{ base: 2, md: 4 }} {/* Reduced from 4/6 to 2/4 */}
         flexWrap="wrap"
-        mt={allSites.slice(2, 7).length > 3 ? 8 : 0}
+        mt={allSites.slice(2, 7).length > 3 ? 4 : 0} {/* Reduced from 6 */}
       >
         {allSites.slice(5, 7).map(renderCard)}
       </Flex>
@@ -151,9 +154,9 @@ function LandingPage() {
 <Box>
   <Heading
     as="h3"
-    size="xl" // Using xl from your updated version
-    mb={10}
-    fontWeight="semibold"
+    size="lg"
+    mb={6} {/* Reduced from mb={8} */}
+    fontWeight="medium"
     textAlign="center"
     color="gray.800"
   >
@@ -162,24 +165,29 @@ function LandingPage() {
   <Box>
     <Grid
       templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
-      gap={{ base: 6, md: 8 }} // Using updated gap values
+      gap={{ base: 2, md: 4 }} {/* Reduced from 4/6 to 2/4 */}
       justifyItems="center"
-      mb={allSites.slice(7).length % 3 !== 0 ? 0 : 8}
+      mb={allSites.slice(7).length % 3 !== 0 ? 0 : 4} {/* Reduced from 6 */}
     >
       {allSites.slice(7, 16).map(renderCard)}
     </Grid>
     {allSites.slice(7).length % 3 !== 0 && (
       <Flex
         justify="center"
-        gap={{ base: "6", md: "8" }}
+        gap={{ base: 2, md: 4 }} {/* Reduced from 4/6 to 2/4 */}
         flexWrap="wrap"
-        mt={allSites.slice(7).length > 3 ? 8 : 0}
+        mt={allSites.slice(7).length > 3 ? 4 : 0} {/* Reduced from 6 */}
       >
         {allSites.slice(16).map(renderCard)}
       </Flex>
     )}
   </Box>
 </Box>
+
+
+
+        </Box>
+      </Box>
 
       {/* Section 3: Why Choose Cobalt Data Network */}
       <Box py={16} bg="white" maxW="1200px" mx="auto" px={4}>
