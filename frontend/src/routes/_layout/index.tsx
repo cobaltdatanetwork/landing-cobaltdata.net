@@ -82,7 +82,7 @@ function LandingPage() {
           { text: "Get Started", link: "/demo-request" },
           { text: "Contact Sales", link: "/contact-sales" },
         ]}
-        bgImage="https://images.unsplash.com/photo-1597733336794-12d05021d510?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        bgImage="https://images.unsplash.com/photo-1517181875630-f72350452109"
       />
 
       <Box py={16} bg="blue.50" color="white">
