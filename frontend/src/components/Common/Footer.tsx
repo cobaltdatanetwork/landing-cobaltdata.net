@@ -25,7 +25,7 @@ const Footer = () => {
             Comprehensive data ecosystem delivering proxies, web scraping, data analytics, market intelligence, and information management. Enterprise solutions for business intelligence, competitive analysis, trend forecasting, and strategic decision-making. Secure, scalable infrastructure with real-time data delivery and support. Global Data & Information solutions serving 190+ countries. 
             </Text>
             <Text color="gray.100" mb={4}>
-              <strong>Phone:</strong> <a href="tel:+18554402242">+1 (855) 440-2242</a>
+              <strong>Phone:</strong> <a href="tel:+1‪9172757922‬">+1 ‪(917) 275-7922‬</a>
             </Text>
             <Text color="gray.100" mb={4}>
               <strong>Email:</strong>{' '}
