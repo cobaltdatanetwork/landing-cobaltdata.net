@@ -63,7 +63,7 @@ function SupportCenterPage() {
     },
     {
       question: "How do I contact support for urgent issues?",
-      answer: "For urgent issues, reach out via live chat (available 24/7 for enterprise clients) or email info@cobaltdata.net. You can also call +1 ‪(917) 275-7922‬ during business hours (Monday to Friday, 9 AM - 6 PM EST). Enterprise clients have access to dedicated support channels."
+      answer: "For urgent issues, reach out via live chat (available 24/7 for enterprise clients) or email info@cobaltdata.net. You can also call +1 ‪(833) 435-3873‬ during business hours (Monday to Friday, 9 AM - 6 PM EST). Enterprise clients have access to dedicated support channels."
     }
   ];
 
